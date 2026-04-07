@@ -106,7 +106,7 @@ function Pricing({ isAnnual }: { isAnnual?: boolean }) {
   return (
     <div className="content-stretch flex gap-[4px] items-end relative shrink-0 w-full" data-name="Pricing">
       <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">
-        {isAnnual ? '$20' : '$25'}
+        {isAnnual ? '$30' : '$35'}
       </p>
       {isAnnual && (
         <p className="[text-decoration-skip-ink:none] decoration-solid font-['Inter:Light',sans-serif] font-light leading-[44px] line-through not-italic relative shrink-0 text-[#a3a3a3] text-[32px] whitespace-nowrap">$25</p>
@@ -121,7 +121,7 @@ function Frame7({ isAnnual }: { isAnnual?: boolean }) {
     <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
       <Pricing isAnnual={isAnnual} />
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#3d3d3d] text-[14px] whitespace-nowrap">
-        {isAnnual ? 'Billed annually ($20/mo per seat)' : 'Billed monthly'}
+        {isAnnual ? 'Billed annually ($30/mo per seat)' : 'Billed monthly'}
       </p>
     </div>
   );
@@ -132,7 +132,7 @@ function Frame8({ isAnnual }: { isAnnual?: boolean }) {
   
   const handleClick = () => {
     const plan = isAnnual ? 'annual' : 'monthly';
-    const price = isAnnual ? 20 : 25;
+    const price = isAnnual ? 30 : 35;
     const planName = isAnnual ? 'Teams Unlimited (Annual)' : 'Teams Unlimited (Monthly)';
     const billing = isAnnual ? 'Billed annually' : 'Billed monthly';
     navigate(`/create-workspace?plan=${plan}&price=${price}&planName=${encodeURIComponent(planName)}&billing=${encodeURIComponent(billing)}`);

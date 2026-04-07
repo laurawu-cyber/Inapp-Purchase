@@ -145,10 +145,10 @@ const en = {
   'billing.billingLabelAnnual': 'Annual',
   'billing.planNameMonthly': 'Team Plan (Monthly)',
   'billing.planNameAnnual': 'Team Plan (Annual)',
-  'billing.priceMonthly': '$25',
-  'billing.priceAnnual': '$20',
-  'billing.perSeatTooltipMonthly': '$25/seat/month',
-  'billing.perSeatTooltipAnnual': '$20/seat/month, billed annually',
+  'billing.priceMonthly': '$35',
+  'billing.priceAnnual': '$30',
+  'billing.perSeatTooltipMonthly': '$35/seat/month',
+  'billing.perSeatTooltipAnnual': '$30/seat/month, billed annually',
 
   // Switch plan modals
   'switchModal.toMonthly.title': 'Switch to monthly billing',
