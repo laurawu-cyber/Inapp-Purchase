@@ -1188,17 +1188,17 @@ export default function TeamPlanAnnual({ className, onClose }: { className?: str
                     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="price & button">
                       <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
                         <div className="content-stretch flex gap-[4px] items-end relative shrink-0 w-full" data-name="Pricing">
-                          <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">{formatPrice(20)}</p>
-                          <p className="[text-decoration-skip-ink:none] decoration-solid font-['Inter:Light',sans-serif] font-light leading-[44px] line-through not-italic relative shrink-0 text-[#a3a3a3] text-[32px] whitespace-nowrap">{formatPrice(25)}</p>
+                          <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">{formatPrice(30)}</p>
+                          <p className="[text-decoration-skip-ink:none] decoration-solid font-['Inter:Light',sans-serif] font-light leading-[44px] line-through not-italic relative shrink-0 text-[#a3a3a3] text-[32px] whitespace-nowrap">{formatPrice(35)}</p>
                           <div className="content-stretch flex flex-[1_0_0] items-center justify-between min-h-px min-w-px py-[4px] relative" data-name="info">
                             <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#74706d] text-[14px]">{t('plan.perSeatMonth')}</p>
                           </div>
                         </div>
-                        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#3d3d3d] text-[14px] whitespace-nowrap">{t('plan.billedAnnually', { price: formatPrice(20) })}</p>
+                        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#3d3d3d] text-[14px] whitespace-nowrap">{t('plan.billedAnnually', { price: formatPrice(30) })}</p>
                       </div>
                       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
                         <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-                          <div onClick={() => navigate('/create-workspace?plan=annual&price=20&planName=Teams%20Unlimited%20(Annual)&billing=Billed%20annually')} className="bg-black content-stretch flex gap-[8px] h-[48px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 w-full cursor-pointer" data-name="Button">
+                          <div onClick={() => navigate('/create-workspace?plan=annual&price=30&planName=Teams%20Unlimited%20(Annual)&billing=Billed%20annually')} className="bg-black content-stretch flex gap-[8px] h-[48px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 w-full cursor-pointer" data-name="Button">
                             <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">{t('plan.upgradeBtn')}</p>
                           </div>
                         </div>

@@ -1860,7 +1860,7 @@ function PlanButtonContainer() {
 
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0" data-name="Plan button container">
-      <div onClick={() => navigate('/create-workspace?plan=monthly&price=25&planName=Teams%20Unlimited%20(Monthly)&billing=Billed%20monthly')} className="bg-black content-stretch flex gap-[8px] h-[48px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 w-[392px] cursor-pointer" data-name="Button">
+      <div onClick={() => navigate('/create-workspace?plan=monthly&price=35&planName=Teams%20Unlimited%20(Monthly)&billing=Billed%20monthly')} className="bg-black content-stretch flex gap-[8px] h-[48px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 w-[392px] cursor-pointer" data-name="Button">
         <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">{t('plan.upgradeBtn')}</p>
       </div>
     </div>
@@ -2447,7 +2447,7 @@ function Frame56({ onToggle, price }: { onToggle?: () => void; price: string }) 
 
 export default function TeamPlanMonthly({ className, onClose, onToggle }: { className?: string; onClose?: () => void; onToggle?: () => void }) {
   const { formatPrice } = useCurrency();
-  const monthlyPrice = formatPrice(25);
+  const monthlyPrice = formatPrice(35);
   
   return (
     <div className={className || "min-h-screen relative w-full bg-[#f5f5f5] overflow-hidden"} data-name="Team Plan- monthly">

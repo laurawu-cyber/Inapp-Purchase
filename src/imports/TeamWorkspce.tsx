@@ -2350,7 +2350,7 @@ export default function TeamWorkspce() {
         keysToRemove.forEach(k => localStorage.removeItem(k));
         sessionStorage.clear();
         // Reload to the default initial URL
-        window.location.href = '/home-team?workspaceName=Plaud+Team&billing=annual&price=20&planName=Team+Plan&seats=10';
+        window.location.href = '/home-team?workspaceName=Plaud+Team&billing=annual&price=30&planName=Team+Plan&seats=10';
       }
     };
     window.addEventListener('keydown', handleReset);

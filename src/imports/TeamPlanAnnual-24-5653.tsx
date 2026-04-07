@@ -259,7 +259,7 @@ function AnnualPlanButton() {
   const navigate = useNavigate();
   
   const handleUpgrade = () => {
-    navigate('/create-workspace?plan=annual&price=20&planName=Teams%20Unlimited%20(Annual)&billing=Billed%20annually');
+    navigate('/create-workspace?plan=annual&price=30&planName=Teams%20Unlimited%20(Annual)&billing=Billed%20annually');
   };
   
   return (

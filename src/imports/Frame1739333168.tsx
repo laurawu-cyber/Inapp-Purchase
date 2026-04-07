@@ -2468,8 +2468,8 @@ function GeneralContent({ workspaceName = 'Team workspace' }: { workspaceName?: 
 
 function SwitchPlanModal({ direction, totalSeats, onCancel, onConfirm }: { direction: 'toMonthly' | 'toAnnual'; totalSeats: number; onCancel: () => void; onConfirm: () => void }) {
   const { t } = useLanguage();
-  const annualPricePerSeat = 20;
-  const monthlyPricePerSeat = 25;
+  const annualPricePerSeat = 30;
+  const monthlyPricePerSeat = 35;
   const annualTotal = totalSeats * annualPricePerSeat * 12;
   const monthlyTotal = totalSeats * monthlyPricePerSeat;
   const fmt = (n: number) => `$${n.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',')}`;

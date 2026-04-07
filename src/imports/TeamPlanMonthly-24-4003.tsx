@@ -1857,7 +1857,7 @@ function PlanButtonContainer() {
   const navigate = useNavigate();
   
   const handleUpgrade = () => {
-    navigate('/create-workspace?plan=monthly&price=25&planName=Teams%20Unlimited%20(Monthly)&billing=Billed%20monthly');
+    navigate('/create-workspace?plan=monthly&price=35&planName=Teams%20Unlimited%20(Monthly)&billing=Billed%20monthly');
   };
   
   return (

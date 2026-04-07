@@ -101,10 +101,10 @@ export async function detectUserCurrency(): Promise<CurrencyInfo> {
 }
 
 // Fixed JPY price overrides: maps USD price → exact JPY price
-// Monthly plan: $25 → ¥6,500; Annual per-month: $20 → ¥4,125 (= ¥49,500 / 12)
+// Monthly plan: $35 → ¥5,500; Annual per-month: $30 → ¥4,500
 const JPY_PRICE_OVERRIDES: Record<number, number> = {
-  25: 6500,   // monthly plan per seat/month
-  20: 4125,   // annual plan per seat/month (¥49,500 / 12)
+  35: 5500,   // monthly plan per seat/month
+  30: 4500,   // annual plan per seat/month
 };
 
 /**
