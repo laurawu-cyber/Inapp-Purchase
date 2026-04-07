@@ -1,17 +1,20 @@
 import svgPaths from "./svg-2ndpja0z18";
-const imgWhatsNewItemImage = "https://www.figma.com/api/mcp/asset/8619a139-c257-4128-9c3f-bb9444492f40";
+import imgWhatsNewItemImage from "@/assets/figma/phone-app.png";
+import img22 from "@/assets/figma/note-pro.png";
 import { imgVector } from "./svg-inu0t";
 import { useSearchParams, useLocation } from "react-router";
 import SidebarComponent from "./Sidebar";
+import { useLanguage } from '../app/i18n/LanguageContext';
 import { TeamProfile } from "./TeamWorkspce-58-2918";
 import SettingsModal from "./Frame1739333168";
 import TeamPlanAnnual from "./TeamPlanAnnual";
 import { useState, useEffect } from "react";
 
 function ViewAllContainer() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex gap-[4px] items-center pl-[12px] pr-[6px] py-[4px] relative rounded-[5px] shrink-0" data-name="View All Container">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#757575] text-[14px] whitespace-nowrap">View all</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#757575] text-[14px] whitespace-nowrap">{t('home.viewAll')}</p>
       <div className="flex items-center justify-center relative shrink-0">
         <div className="-scale-y-100 flex-none">
           <div className="overflow-clip relative size-[16px]" data-name="View All Icon">
@@ -34,9 +37,10 @@ function ViewAllContainer() {
 }
 
 function CommunityHeader() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Community Header">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">Plaud Community</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">{t('home.community')}</p>
       <ViewAllContainer />
     </div>
   );
@@ -337,9 +341,10 @@ function CommunitySection() {
 }
 
 function ViewAllContainer1() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex gap-[4px] items-center pl-[12px] pr-[6px] py-[4px] relative rounded-[5px] shrink-0" data-name="View All Container">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">View all</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">{t('home.viewAll')}</p>
       <div className="flex items-center justify-center relative shrink-0">
         <div className="-scale-y-100 flex-none">
           <div className="overflow-clip relative size-[16px]" data-name="Chevron Icon">
@@ -362,9 +367,10 @@ function ViewAllContainer1() {
 }
 
 function CommunityHeader1() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-[952px]" data-name="Community Header">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">Plaud Community</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">{t('home.community')}</p>
       <ViewAllContainer1 />
     </div>
   );
@@ -387,10 +393,11 @@ function Header4() {
 }
 
 function Text4() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal gap-[4px] items-start not-italic relative shrink-0 w-full" data-name="Text">
-      <p className="leading-[30px] relative shrink-0 text-[20px] text-black w-full">Make me smart</p>
-      <p className="leading-[20px] overflow-hidden relative shrink-0 text-[#7a7a7a] text-[14px] text-ellipsis w-full">Crafted for oral surgery assessments</p>
+      <p className="leading-[30px] relative shrink-0 text-[20px] text-black w-full">{t('community.card1.title')}</p>
+      <p className="leading-[20px] overflow-hidden relative shrink-0 text-[#7a7a7a] text-[14px] text-ellipsis w-full">{t('community.card1.subtitle')}</p>
     </div>
   );
 }
@@ -456,10 +463,11 @@ function Header5() {
 }
 
 function Text5() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal gap-[4px] items-start not-italic relative shrink-0 w-full" data-name="Text">
-      <p className="leading-[30px] relative shrink-0 text-[20px] text-black w-full">Meeting Notes</p>
-      <p className="leading-[22px] overflow-hidden relative shrink-0 text-[#7a7a7a] text-[14px] text-ellipsis w-full">Applicable for multi-project progress review meetings, focusing on assessing current progress, bottlenecks, and planning.</p>
+      <p className="leading-[30px] relative shrink-0 text-[20px] text-black w-full">{t('community.card2.title')}</p>
+      <p className="leading-[22px] overflow-hidden relative shrink-0 text-[#7a7a7a] text-[14px] text-ellipsis w-full">{t('community.card2.subtitle')}</p>
     </div>
   );
 }
@@ -524,30 +532,33 @@ function Header6() {
 }
 
 function Tag() {
+  const { t } = useLanguage();
   return (
     <div className="bg-[#ebebeb] content-stretch flex h-[20px] items-center justify-center px-[8px] py-[4px] relative rounded-[5px] shrink-0" data-name="Tag">
       <div className="flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#3d3d3d] text-[12px] whitespace-nowrap">
-        <p className="leading-[18px]">Detailed</p>
+        <p className="leading-[18px]">{t('community.card3.tag1')}</p>
       </div>
     </div>
   );
 }
 
 function Tag1() {
+  const { t } = useLanguage();
   return (
     <div className="bg-[#ebebeb] content-stretch flex h-[20px] items-center justify-center px-[8px] py-[4px] relative rounded-[5px] shrink-0" data-name="Tag">
       <div className="flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#3d3d3d] text-[12px] whitespace-nowrap">
-        <p className="leading-[18px]">Flexible</p>
+        <p className="leading-[18px]">{t('community.card3.tag2')}</p>
       </div>
     </div>
   );
 }
 
 function Tag2() {
+  const { t } = useLanguage();
   return (
     <div className="bg-[#ebebeb] content-stretch flex h-[20px] items-center justify-center px-[8px] py-[4px] relative rounded-[5px] shrink-0" data-name="Tag">
       <div className="flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#3d3d3d] text-[12px] whitespace-nowrap">
-        <p className="leading-[18px]">Personalized Structure</p>
+        <p className="leading-[18px]">{t('community.card3.tag3')}</p>
       </div>
     </div>
   );
@@ -564,9 +575,10 @@ function Tags() {
 }
 
 function Text6() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-name="Text">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[30px] not-italic relative shrink-0 text-[20px] text-black w-full">Autopilot</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[30px] not-italic relative shrink-0 text-[20px] text-black w-full">{t('community.card3.title')}</p>
       <Tags />
     </div>
   );
@@ -610,10 +622,11 @@ function Header7() {
 }
 
 function Text7() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal gap-[4px] items-start not-italic relative shrink-0 w-full" data-name="Text">
-      <p className="leading-[30px] relative shrink-0 text-[20px] text-black w-full">Make me smart</p>
-      <p className="leading-[20px] overflow-hidden relative shrink-0 text-[#7a7a7a] text-[14px] text-ellipsis w-full">Crafted for oral surgery assessments</p>
+      <p className="leading-[30px] relative shrink-0 text-[20px] text-black w-full">{t('community.card1.title')}</p>
+      <p className="leading-[20px] overflow-hidden relative shrink-0 text-[#7a7a7a] text-[14px] text-ellipsis w-full">{t('community.card1.subtitle')}</p>
     </div>
   );
 }
@@ -719,9 +732,10 @@ function CommunityContainer() {
 }
 
 function ViewAllContainer2() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex gap-[4px] items-center pl-[12px] pr-[6px] py-[4px] relative rounded-[5px] shrink-0" data-name="View All Container">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">View all</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">{t('home.viewAll')}</p>
       <div className="flex items-center justify-center relative shrink-0">
         <div className="-scale-y-100 flex-none">
           <div className="overflow-clip relative size-[16px]" data-name="Chevron Icon">
@@ -744,11 +758,12 @@ function ViewAllContainer2() {
 }
 
 function RecentFilesHeader() {
+  const { t } = useLanguage();
   return (
     <div className="relative shrink-0 w-full" data-name="Recent Files Header">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex items-center justify-between relative w-full">
-          <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">Recent files</p>
+          <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">{t('home.recentFiles')}</p>
           <ViewAllContainer2 />
         </div>
       </div>
@@ -757,9 +772,10 @@ function RecentFilesHeader() {
 }
 
 function Frame() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black w-full">{`Steve Jobs & Bill Gates: A Conversation That Shaped Technology`}</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black w-full">{t('nav.file1')}</p>
     </div>
   );
 }
@@ -846,6 +862,7 @@ function Frame3() {
 }
 
 function Frame20() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[4px] items-center min-h-px min-w-px relative">
       <div className="relative shrink-0 size-[16px]" data-name="icon_iconfont_folder_foler_1">
@@ -855,23 +872,34 @@ function Frame20() {
           </svg>
         </div>
       </div>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[#7a7a7a] text-[12px] whitespace-nowrap">&nbsp;</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[#7a7a7a] text-[12px] whitespace-nowrap">{t('nav.folder1')}</p>
     </div>
   );
 }
 
 function Frame17() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full">
-      <Frame20 />
+      <div className="content-stretch flex flex-[1_0_0] gap-[4px] items-center min-h-px min-w-px relative">
+        <div className="relative shrink-0 size-[16px]" data-name="icon_iconfont_folder_foler_1">
+          <div className="absolute inset-[19.79%_16.54%_17.8%_18.54%]" data-name="Vector">
+            <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10.3867 9.98535">
+              <path d={svgPaths.p33c3f600} fill="var(--fill-0, black)" id="Vector" />
+            </svg>
+          </div>
+        </div>
+        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[#7a7a7a] text-[12px] whitespace-nowrap">{t('nav.folder2')}</p>
+      </div>
     </div>
   );
 }
 
 function Frame1() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black w-full">How to use Plaud</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black w-full">{t('nav.file2')}</p>
       <Frame17 />
     </div>
   );
@@ -959,6 +987,7 @@ function Frame4() {
 }
 
 function Frame25() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[4px] items-center min-h-px min-w-px relative">
       <div className="relative shrink-0 size-[16px]" data-name="icon_iconfont_folder_foler_1">
@@ -968,7 +997,7 @@ function Frame25() {
           </svg>
         </div>
       </div>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[#7a7a7a] text-[12px] whitespace-nowrap">&nbsp;</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[#7a7a7a] text-[12px] whitespace-nowrap">{t('nav.folder3')}</p>
     </div>
   );
 }
@@ -982,9 +1011,10 @@ function Frame24() {
 }
 
 function Frame2() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-h-px min-w-px relative">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black w-full">Welcome to Plaud.ai</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black w-full">{t('nav.file3')}</p>
       <Frame24 />
     </div>
   );
@@ -1109,9 +1139,10 @@ function RecentFilesContainer() {
 }
 
 function ViewAllContainer3() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex gap-[4px] items-center pl-[12px] pr-[6px] py-[4px] relative rounded-[5px] shrink-0" data-name="View All Container">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">View all</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">{t('home.viewAll')}</p>
       <div className="flex items-center justify-center relative shrink-0">
         <div className="-scale-y-100 flex-none">
           <div className="overflow-clip relative size-[16px]" data-name="Chevron Icon">
@@ -1134,9 +1165,10 @@ function ViewAllContainer3() {
 }
 
 function WhatsNewHeader() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="What's New Header">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">{`What's new`}</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">{t('home.whatsNew')}</p>
       <ViewAllContainer3 />
     </div>
   );
@@ -1175,10 +1207,11 @@ function VectorContainer() {
 }
 
 function WhatsNewItemTextContainer() {
+  const { t } = useLanguage();
   return (
     <div className="absolute content-stretch flex flex-col gap-[4px] items-start left-[16px] not-italic top-[12px] w-[270px]" data-name="What's New Item Text Container">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] relative shrink-0 text-[18px] text-black w-[270px]">Introducing Plaud 3.0</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] relative shrink-0 text-[#7a7a7a] text-[12px] w-[270px]">All-in-one upgrade with smarter AI, a smoother UI, and a more seamless workflow.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] relative shrink-0 text-[18px] text-black w-[270px]">{t('whatsNew.card1.title')}</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] relative shrink-0 text-[#7a7a7a] text-[12px] w-[270px]">{t('whatsNew.card1.subtitle')}</p>
     </div>
   );
 }
@@ -1328,10 +1361,11 @@ function TabContainer1() {
 }
 
 function WhatsNewItemTextContainer1() {
+  const { t } = useLanguage();
   return (
     <div className="absolute content-stretch flex flex-col gap-[4px] items-start left-[16px] not-italic top-[12px] w-[269px]" data-name="What's New Item Text Container">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] relative shrink-0 text-[18px] text-black w-full">3 AI Superpowers. One Plaud.</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] relative shrink-0 text-[#7a7a7a] text-[12px] w-full">Multimodal input. Multi-dimensional summaries. Ask Plaud anytime.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] relative shrink-0 text-[18px] text-black w-full">{t('whatsNew.card2.title')}</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] relative shrink-0 text-[#7a7a7a] text-[12px] w-full">{t('whatsNew.card2.subtitle')}</p>
     </div>
   );
 }
@@ -1369,10 +1403,11 @@ function WhatsNewItem2() {
 }
 
 function WhatsNewItemTextContainer2() {
+  const { t } = useLanguage();
   return (
     <div className="absolute content-stretch flex flex-col gap-[4px] items-start left-[16px] not-italic top-[12px] w-[270px]" data-name="What's New Item Text Container">
-      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] relative shrink-0 text-[18px] text-black w-full">Note Pro: Precision at Your Fingertips</p>
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] relative shrink-0 text-[#7a7a7a] text-[12px] w-full">Meet Note Pro—see more, mark key moments, and capture everything with ease.</p>
+      <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] relative shrink-0 text-[18px] text-black w-full">{t('whatsNew.card3.title')}</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] relative shrink-0 text-[#7a7a7a] text-[12px] w-full">{t('whatsNew.card3.subtitle')}</p>
     </div>
   );
 }
@@ -1389,6 +1424,10 @@ function WhatsNewItem4() {
   return (
     <div className="absolute bg-[#f9f9f9] h-[247px] left-[651px] overflow-clip rounded-[5px] top-0 w-[301px]" data-name="What's New Item">
       <div className="absolute h-[247px] left-0 top-0 w-[301px]" data-name="What's New Item Image" style={{ backgroundImage: "url('data:image/svg+xml;utf8,<svg viewBox=\\'0 0 301 247\\' xmlns=\\'http://www.w3.org/2000/svg\\' preserveAspectRatio=\\'none\\'><rect x=\\'0\\' y=\\'0\\' height=\\'100%\\' width=\\'100%\\' fill=\\'url(%23grad)\\' opacity=\\'0.6000000238418579\\'/><defs><radialGradient id=\\'grad\\' gradientUnits=\\'userSpaceOnUse\\' cx=\\'0\\' cy=\\'0\\' r=\\'10\\' gradientTransform=\\'matrix(-0.049998 -17.515 25.746 -0.092642 151 152.69)\\'><stop stop-color=\\'rgba(182,255,183,1)\\' offset=\\'0\\'/><stop stop-color=\\'rgba(183,243,250,1)\\' offset=\\'0.2\\'/><stop stop-color=\\'rgba(208,234,246,1)\\' offset=\\'0.45\\'/><stop stop-color=\\'rgba(239,245,255,1)\\' offset=\\'0.7\\'/><stop stop-color=\\'rgba(249,249,249,1)\\' offset=\\'1\\'/></radialGradient></defs></svg>')" }} />
+      <div className="-translate-x-1/2 absolute h-[314px] left-[calc(50%-3px)] top-[17px] w-[217px]" data-name="图层 2 2">
+        <img alt="" className="absolute inset-0 max-w-none object-cover opacity-95 pointer-events-none size-full" src={img22} />
+      </div>
+      <div className="absolute bg-gradient-to-t from-[#f9f9f9] from-[18.75%] h-[125px] left-0 to-[rgba(249,249,249,0)] top-[122px] w-[302px]" />
       <WhatsNewItem5 />
     </div>
   );
@@ -1454,14 +1493,12 @@ function UserNameContainer() {
 
 function UserAvatarContainer() {
   return (
-    <div className="bg-[#ebebeb] overflow-clip relative rounded-[3.75px] shrink-0 size-[24px]" data-name="User Avatar Container">
-      <div className="absolute left-[4.5px] overflow-clip size-[15px] top-[4.5px]" data-name="icon_tem_com_real_estate">
-        <div className="absolute inset-[23.84%_20%_20%_20%]" data-name="Vector">
-          <div className="absolute inset-[-4.45%_-4.17%_0_-4.17%]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9.75 8.79899">
-              <path d={svgPaths.p3846b80} id="Vector" stroke="var(--stroke-0, black)" strokeLinejoin="round" strokeWidth="0.75" />
-            </svg>
-          </div>
+    <div className="bg-black rounded-full shrink-0 size-[24px] flex items-center justify-center" data-name="User Avatar Container">
+      <div className="overflow-clip relative size-[14px]">
+        <div className="absolute inset-[20.31%_15.36%_21.03%_15.21%]">
+          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.886 11.7324">
+            <path d="M6.94336 0.416992C8.6287 0.417154 10.1741 1.50768 10.6836 3.09863L13.3154 11.3154H11.8262L9.17285 2.44922C9.04523 2.02256 8.65256 1.72949 8.20703 1.72949H5.67871C5.23324 1.72956 4.8405 2.02261 4.71289 2.44922L2.06055 11.3154H0.570312L3.20215 3.09863C3.71169 1.50757 5.2579 0.416992 6.94336 0.416992ZM6.94336 5.64551C7.55603 5.64571 8.05264 6.14219 8.05273 6.75488C8.05273 7.36757 7.55614 7.86406 6.94336 7.86426C6.33045 7.86426 5.83301 7.3677 5.83301 6.75488C5.8331 6.14206 6.33055 5.64551 6.94336 5.64551Z" fill="white" stroke="white" strokeWidth="0.833333" />
+          </svg>
         </div>
       </div>
     </div>
@@ -1469,10 +1506,11 @@ function UserAvatarContainer() {
 }
 
 function UserInfoTextContainer({ workspaceName }: { workspaceName: string }) {
+  const { lang } = useLanguage();
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative flex-1 min-w-0" data-name="User Info Text Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">{lang === 'ja' ? 'デモアカウント' : 'Demo Account'}</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#757575] text-[13px] w-full">
         <p className="leading-[18px] break-words max-w-[200px]">{workspaceName}</p>
@@ -1987,18 +2025,28 @@ function ModalXButton({ onClick }: { onClick: () => void }) {
   );
 }
 
-function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }: {
+function InviteMemberModal({ workspaceName, totalSeats, seatsUsed = 0, onClose, onSendInvites }: {
   workspaceName: string;
   totalSeats: number;
+  seatsUsed?: number;
   onClose: () => void;
   onSendInvites: (emails: string[], roles: Record<string, 'Member' | 'Admin'>) => void;
 }) {
+  const { t } = useLanguage();
   const [step, setStep] = useState<'input' | 'review'>('input');
   const [inputValue, setInputValue] = useState('');
   const [emails, setEmails] = useState<string[]>([]);
   const [inputError, setInputError] = useState('');
   const [emailRoles, setEmailRoles] = useState<Record<string, 'Member' | 'Admin'>>({});
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const availableSeats = totalSeats - seatsUsed;
+  // Count the in-progress typed value as a pending seat if it has content
+  const pendingCount = emails.length + (inputValue.trim() ? 1 : 0);
+  const seatsOverflowed = pendingCount > availableSeats;
+  // Live display values — update as user types but never persist until Next is clicked
+  const liveSeatsUsed = Math.min(totalSeats, seatsUsed + pendingCount);
+  const liveAvailable = Math.max(0, totalSeats - liveSeatsUsed);
 
   const addEmail = (raw: string) => {
     const email = raw.trim().replace(/,/g, '');
@@ -2034,7 +2082,7 @@ function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }
       <div className="bg-white content-stretch flex flex-col gap-[16px] items-end p-[24px] relative rounded-[5px] shadow-[0px_0px_32px_0px_rgba(0,0,0,0.1)] w-[512px]" data-name="Modals" onClick={() => openDropdown && setOpenDropdown(null)}>
         <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
           <div className="border-[#ebebeb] border-b border-solid content-stretch flex flex-col h-[45px] items-start pb-[16px] relative shrink-0 w-full">
-            <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic relative shrink-0 text-[18px] text-black">{`Invite members to ${workspaceName}`}</p>
+            <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic relative shrink-0 text-[18px] text-black">{t('invite.titleTo', { workspace: workspaceName })}</p>
           </div>
         </div>
         <ModalXButton onClick={onClose} />
@@ -2042,7 +2090,7 @@ function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }
         <div className="content-stretch flex items-start relative shrink-0 w-full">
           <div className="content-stretch flex flex-col items-start relative shrink-0 flex-1 min-w-0">
             <div className="content-stretch flex h-[40px] items-center overflow-clip p-[8px] relative shrink-0 w-full">
-              <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">Email</p>
+              <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">{t('invite.emailCol')}</p>
             </div>
             {emails.map(email => (
               <div key={email} className="content-stretch flex h-[40px] items-center overflow-clip p-[8px] relative shrink-0 w-full">
@@ -2052,7 +2100,7 @@ function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }
           </div>
           <div className="content-stretch flex flex-col items-start relative shrink-0 w-[140px]">
             <div className="content-stretch flex h-[40px] items-center overflow-clip p-[8px] relative shrink-0 w-full">
-              <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">Role</p>
+              <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">{t('invite.role')}</p>
             </div>
             {emails.map(email => {
               const role = emailRoles[email] || 'Member';
@@ -2082,10 +2130,10 @@ function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }
                               <svg className="size-[12px]" fill="none" viewBox="0 0 12 12"><path d="M1 6l3.5 3.5L11 2" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                             )}
                           </div>
-                          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px relative text-[#3d3d3d] text-[14px]">Admin</p>
+                          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px relative text-[#3d3d3d] text-[14px]">{t('members.role.admin')}</p>
                         </div>
                         <div className="content-stretch flex items-center justify-center pl-[28px] relative shrink-0 w-full">
-                          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px relative text-[#7a7a7a] text-[12px]">Can manage members, billing, and workspace settings.</p>
+                          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px relative text-[#7a7a7a] text-[12px]">{t('members.role.adminDesc')}</p>
                         </div>
                       </div>
                       {/* Member option */}
@@ -2099,10 +2147,10 @@ function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }
                               <svg className="size-[12px]" fill="none" viewBox="0 0 12 12"><path d="M1 6l3.5 3.5L11 2" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
                             )}
                           </div>
-                          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px relative text-[#3d3d3d] text-[14px]">Member</p>
+                          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px relative text-[#3d3d3d] text-[14px]">{t('members.role.member')}</p>
                         </div>
                         <div className="content-stretch flex items-center justify-center pl-[28px] relative shrink-0 w-full">
-                          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px relative text-[#7a7a7a] text-[12px]">Can create content and share it with members in the workspace.</p>
+                          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px relative text-[#7a7a7a] text-[12px]">{t('members.role.memberDesc')}</p>
                         </div>
                       </div>
                     </div>
@@ -2126,10 +2174,10 @@ function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }
         </div>
         <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0">
           <button onClick={() => setStep('input')} className="bg-white border border-[#adadad] border-solid content-stretch flex gap-[8px] h-[40px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 hover:bg-gray-50 cursor-pointer">
-            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-black text-[14px] text-center whitespace-nowrap">Back</p>
+            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-black text-[14px] text-center whitespace-nowrap">{t('btn.back')}</p>
           </button>
           <button onClick={() => { onSendInvites(emails, emailRoles); onClose(); }} className="bg-black content-stretch flex gap-[8px] h-[40px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 hover:bg-gray-800 cursor-pointer">
-            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-white text-[14px] text-center whitespace-nowrap">Send invite</p>
+            <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-white text-[14px] text-center whitespace-nowrap">{t('invite.sendInvite')}</p>
           </button>
         </div>
       </div>
@@ -2140,19 +2188,19 @@ function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }
     <div className="bg-white content-stretch flex flex-col gap-[16px] items-end p-[24px] relative rounded-[5px] shadow-[0px_0px_32px_0px_rgba(0,0,0,0.1)] w-[512px]" data-name="Modals">
       <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
         <div className="border-[#ebebeb] border-b border-solid content-stretch flex flex-col h-[45px] items-start pb-[16px] relative shrink-0 w-full">
-          <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic relative shrink-0 text-[18px] text-black">{`Invite members to ${workspaceName}`}</p>
+          <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic relative shrink-0 text-[18px] text-black">{t('invite.titleTo', { workspace: workspaceName })}</p>
         </div>
-        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] w-full">You can change roles later.</p>
+        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] w-full">{t('invite.canChangeRoles')}</p>
       </div>
       <ModalXButton onClick={onClose} />
       <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
         <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full">
-          <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic relative shrink-0 text-[#3d3d3d] text-[16px]">Invite members</p>
-          <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[#7a7a7a] text-[12px]">{`0 of ${totalSeats} seats used • ${totalSeats} seats available`}</p>
+          <p className="font-['Inter:Regular',sans-serif] font-normal leading-[24px] not-italic relative shrink-0 text-[#3d3d3d] text-[16px]">{t('invite.title')}</p>
+          <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[#7a7a7a] text-[12px]">{t('invite.seatsUsedLabel', { used: liveSeatsUsed, total: totalSeats })}{liveAvailable > 0 ? t('invite.seatsAvailable', { available: liveAvailable }) : t('invite.noSeatsAvailable')}</p>
         </div>
         {/* Pill input box */}
         <div
-          className="border border-black border-solid content-stretch flex flex-wrap gap-[8px] items-start min-h-[120px] overflow-auto p-[8px] relative rounded-[5px] shrink-0 w-full cursor-text"
+          className={`border ${seatsOverflowed ? 'border-[#ff503f]' : 'border-black'} border-solid content-stretch flex flex-wrap gap-[8px] items-start min-h-[120px] overflow-auto p-[8px] relative rounded-[5px] shrink-0 w-full cursor-text`}
           onClick={() => document.getElementById('invite-email-input')?.focus()}
         >
           {emails.map(email => (
@@ -2167,21 +2215,28 @@ function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }
             id="invite-email-input"
             autoFocus
             className="font-['Inter:Regular',sans-serif] font-normal text-[14px] leading-[22px] text-black outline-none bg-transparent min-w-[160px] flex-1 placeholder:text-[#a3a3a3]"
-            placeholder={emails.length === 0 ? 'Enter email addresses' : ''}
+            placeholder={emails.length === 0 ? t('invite.emailPlaceholder') : ''}
             value={inputValue}
             onChange={(e) => { setInputValue(e.target.value); setInputError(''); }}
             onKeyDown={handleKeyDown}
             onBlur={() => { if (inputValue.trim()) addEmail(inputValue); }}
           />
         </div>
-        {inputError && <p className="font-['Inter:Regular',sans-serif] font-normal text-[12px] text-red-500 leading-[18px]">{inputError}</p>}
+        {seatsOverflowed ? (
+          <p className="font-['Inter:Regular',sans-serif] font-normal text-[12px] leading-[18px] overflow-hidden text-ellipsis whitespace-nowrap">
+            <span className="text-[#ff503f]">{t('invite.noSeatsError')}</span>
+            <span className="text-[#06c] cursor-pointer" onClick={() => { onClose(); }}>{t('invite.manageSeats')}</span>
+          </p>
+        ) : inputError ? (
+          <p className="font-['Inter:Regular',sans-serif] font-normal text-[12px] text-[#ff503f] leading-[18px]">{inputError}</p>
+        ) : null}
       </div>
       <button
-        onClick={emails.length > 0 ? () => setStep('review') : undefined}
-        disabled={emails.length === 0}
-        className={`content-stretch flex gap-[8px] h-[40px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 ${emails.length > 0 ? 'bg-black hover:bg-gray-800 cursor-pointer' : 'bg-[#c2c2c2] cursor-default'}`}
+        onClick={emails.length > 0 && !seatsOverflowed ? () => setStep('review') : undefined}
+        disabled={emails.length === 0 || seatsOverflowed}
+        className={`content-stretch flex gap-[8px] h-[40px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 ${emails.length > 0 && !seatsOverflowed ? 'bg-black hover:bg-gray-800 cursor-pointer' : 'bg-[#c2c2c2] cursor-default'}`}
       >
-        <p className={`font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-center whitespace-nowrap ${emails.length > 0 ? 'text-white' : 'text-[#a3a3a3]'}`}>Next</p>
+        <p className={`font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-center whitespace-nowrap ${emails.length > 0 && !seatsOverflowed ? 'text-white' : 'text-[#a3a3a3]'}`}>{t('btn.next')}</p>
       </button>
     </div>
   );
@@ -2190,25 +2245,73 @@ function InviteMemberModal({ workspaceName, totalSeats, onClose, onSendInvites }
 export default function TeamWorkspce() {
   const [searchParams] = useSearchParams();
   const workspaceName = searchParams.get("workspaceName") || localStorage.getItem('workspaceName') || "Plaud ops";
-  const totalSeats = parseInt(searchParams.get("seats") || "2");
+  // Load totalSeats from URL param (first visit) or per-workspace localStorage (revisit)
+  const totalSeats = (() => {
+    const seatsParam = searchParams.get("seats");
+    if (seatsParam) return parseInt(seatsParam);
+    const stored = localStorage.getItem(`ws:${workspaceName}:seats`);
+    if (stored) return parseInt(stored);
+    return 2;
+  })();
   const pendingInvites = parseInt(searchParams.get("pendingInvites") || "0");
   const location = useLocation();
   const [showModal, setShowModal] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
+  const [showSettings, setShowSettings] = useState(() => searchParams.get('openSettings') !== null);
+  const [settingsInitialTab] = useState(() => searchParams.get('openSettings') || 'account');
   const [showInviteModal, setShowInviteModal] = useState(false);
   const [showTeamPlan, setShowTeamPlan] = useState(false);
-  const [displayName, setDisplayName] = useState('Testing Account');
+  const [displayName, setDisplayName] = useState('Demo Account');
+
+  // Pre-configured active members (besides the current user) loaded from localStorage
+  const [activeMembers] = useState<{ email: string; name: string; role: 'Member' | 'Admin' }[]>(() => {
+    try {
+      const stored = localStorage.getItem(`ws:${workspaceName}:activeMembers`);
+      if (stored) return JSON.parse(stored);
+    } catch { /* ignore */ }
+    return [];
+  });
+
   const [invitedMembers, setInvitedMembers] = useState<{ email: string; role: 'Member' | 'Admin' }[]>(() => {
+    // Load persisted members (contains correct roles from prior invites)
+    let persisted: { email: string; role: 'Member' | 'Admin' }[] = [];
+    try {
+      const stored = localStorage.getItem(`ws:${workspaceName}:members`);
+      if (stored) persisted = JSON.parse(stored);
+    } catch { /* ignore */ }
+
     const emailsParam = searchParams.get('emails');
     if (emailsParam) {
       try {
         const emails = JSON.parse(emailsParam) as string[];
-        return emails.map(email => ({ email, role: 'Member' as const }));
-      } catch { return []; }
+        const persistedByEmail = Object.fromEntries(persisted.map(m => [m.email, m.role]));
+        // Preserve role from storage if known; fall back to Member for truly new entries
+        return emails.map(email => ({ email, role: persistedByEmail[email] ?? ('Member' as const) }));
+      } catch { return persisted; }
     }
-    return [];
+
+    return persisted;
   });
   const [inviteToast, setInviteToast] = useState<{ visible: boolean; text: string }>({ visible: false, text: '' });
+  const { t, lang } = useLanguage();
+
+  // Persist plan/billing/seats details to per-workspace localStorage on first load
+  useEffect(() => {
+    const plan = searchParams.get('plan');
+    const billing = searchParams.get('billing');
+    const price = searchParams.get('price');
+    const planName = searchParams.get('planName');
+    const seats = searchParams.get('seats');
+    if (plan) localStorage.setItem(`ws:${workspaceName}:plan`, plan);
+    if (billing) localStorage.setItem(`ws:${workspaceName}:billing`, billing);
+    if (price) localStorage.setItem(`ws:${workspaceName}:price`, price);
+    if (planName) localStorage.setItem(`ws:${workspaceName}:planName`, planName);
+    if (seats) localStorage.setItem(`ws:${workspaceName}:seats`, seats);
+  }, []);
+
+  // Persist invited members to per-workspace localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem(`ws:${workspaceName}:members`, JSON.stringify(invitedMembers));
+  }, [invitedMembers, workspaceName]);
 
   useEffect(() => {
     // Check if user came from /welcome
@@ -2221,6 +2324,38 @@ export default function TeamWorkspce() {
       return () => clearTimeout(timer);
     }
   }, [location]);
+
+  useEffect(() => {
+    const switched = sessionStorage.getItem('switchedWorkspace');
+    if (switched) {
+      sessionStorage.removeItem('switchedWorkspace');
+      setInviteToast({ visible: true, text: t('toast.switchedTo', { name: switched }) });
+      setTimeout(() => setInviteToast({ visible: false, text: '' }), 3000);
+    }
+  }, []);
+
+  // Demo reset: Ctrl+Shift+R (or Cmd+Shift+R on Mac) clears all state and reloads
+  useEffect(() => {
+    const handleReset = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === 'R') {
+        e.preventDefault();
+        // Clear all workspace-specific keys
+        const keysToRemove: string[] = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && (key.startsWith('ws:') || key === 'workspaceName')) {
+            keysToRemove.push(key);
+          }
+        }
+        keysToRemove.forEach(k => localStorage.removeItem(k));
+        sessionStorage.clear();
+        // Reload to the default initial URL
+        window.location.href = '/home-team?workspaceName=Plaud+Team&billing=annual&price=20&planName=Team+Plan&seats=10';
+      }
+    };
+    window.addEventListener('keydown', handleReset);
+    return () => window.removeEventListener('keydown', handleReset);
+  }, []);
 
   return (
     <div className="bg-white relative size-full" data-name="Team workspce">
@@ -2239,7 +2374,7 @@ export default function TeamWorkspce() {
       {showSettings && (
         <div className="fixed inset-0 z-[500] flex items-center justify-center bg-black/50" onClick={() => setShowSettings(false)}>
           <div className="w-[1196px] h-[829px] max-h-[90vh] overflow-auto" onClick={(e) => e.stopPropagation()}>
-            <SettingsModal onClose={() => setShowSettings(false)} onDisplayNameChange={setDisplayName} onInviteMembers={() => setShowInviteModal(true)} pendingInvites={pendingInvites + invitedMembers.length} invitedMembers={invitedMembers} workspaceName={workspaceName} />
+            <SettingsModal onClose={() => setShowSettings(false)} onDisplayNameChange={setDisplayName} onInviteMembers={() => setShowInviteModal(true)} pendingInvites={pendingInvites + invitedMembers.length} invitedMembers={invitedMembers} activeMembers={activeMembers} workspaceName={workspaceName} totalSeats={totalSeats} initialTab={settingsInitialTab} />
           </div>
         </div>
       )}
@@ -2266,9 +2401,14 @@ export default function TeamWorkspce() {
             <InviteMemberModal
               workspaceName={workspaceName}
               totalSeats={totalSeats}
+              seatsUsed={1 + activeMembers.length + invitedMembers.length}
               onClose={() => setShowInviteModal(false)}
               onSendInvites={(emails, roles) => {
-                const existingEmails = invitedMembers.map(m => m.email);
+                const existingEmails = [
+                  'demo@plaud.ai',
+                  ...activeMembers.map(m => m.email),
+                  ...invitedMembers.map(m => m.email),
+                ];
                 const newMembers = emails
                   .filter(e => !existingEmails.includes(e))
                   .map(e => ({ email: e, role: roles[e] || 'Member' as const }));
@@ -2276,9 +2416,14 @@ export default function TeamWorkspce() {
                 const memberCount = emails.filter(e => (roles[e] || 'Member') === 'Member').length;
                 const adminCount = emails.filter(e => roles[e] === 'Admin').length;
                 let parts: string[] = [];
-                if (memberCount > 0) parts.push(`${memberCount} member${memberCount > 1 ? 's' : ''}`);
-                if (adminCount > 0) parts.push(`${adminCount} admin${adminCount > 1 ? 's' : ''}`);
-                const toastText = `Invited ${parts.join(' and ')} to ${workspaceName}`;
+                if (lang === 'ja') {
+                  if (memberCount > 0) parts.push(`${memberCount}名のメンバー`);
+                  if (adminCount > 0) parts.push(`${adminCount}名の管理者`);
+                } else {
+                  if (memberCount > 0) parts.push(`${memberCount} member${memberCount > 1 ? 's' : ''}`);
+                  if (adminCount > 0) parts.push(`${adminCount} admin${adminCount > 1 ? 's' : ''}`);
+                }
+                const toastText = t('toast.invitedTo', { who: parts.join(lang === 'ja' ? 'と' : ' and '), workspace: workspaceName });
                 setInviteToast({ visible: true, text: toastText });
                 setTimeout(() => setInviteToast({ visible: false, text: '' }), 5000);
               }}

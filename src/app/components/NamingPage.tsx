@@ -9,7 +9,7 @@ export default function NamingPage() {
   const { location } = useCurrency();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState(location.country);
-  const [workspaceName, setWorkspaceName] = useState("Testing Account's workspace");
+  const [workspaceName, setWorkspaceName] = useState("Demo Account's workspace");
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
@@ -33,10 +33,14 @@ export default function NamingPage() {
       params.set('workspaceName', workspaceName);
       // Persist so home-team always shows the right name, even after refresh
       localStorage.setItem('workspaceName', workspaceName);
-      // Store as array for multi-workspace dropdown support
-      const existing: string[] = JSON.parse(localStorage.getItem('teamWorkspaces') || '[]');
-      if (!existing.includes(workspaceName)) {
-        existing.push(workspaceName);
+      // Store as array of {name, createdAt} objects for multi-workspace support
+      const raw = JSON.parse(localStorage.getItem('teamWorkspaces') || '[]');
+      const existing: {name: string, createdAt: string}[] = raw.map((item: any) =>
+        typeof item === 'string' ? { name: item, createdAt: '' } : item
+      );
+      if (!existing.find(w => w.name === workspaceName)) {
+        const createdAt = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        existing.push({ name: workspaceName, createdAt });
         localStorage.setItem('teamWorkspaces', JSON.stringify(existing));
       }
     }

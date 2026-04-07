@@ -1,6 +1,6 @@
 import svgPaths from "./svg-dwpprsfly5";
-import imgImage6344892 from "figma:asset/854c6d231644b58ddb193dc1c6c1ea956e606e33.png";
-import img22 from "figma:asset/aaec7dd1487c050adb61170dae29c583bb1df724.png";
+import imgImage6344892 from "@/assets/figma/phone-app.png";
+import img22 from "@/assets/figma/note-pro.png";
 import { imgVector } from "./svg-wnvvf";
 
 function Logo() {
@@ -51,7 +51,7 @@ function Frame82() {
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0 whitespace-nowrap">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">Demo Account</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#7a7a7a] text-[12px]">
         <p className="leading-[18px]">Personal workspace</p>
@@ -1775,7 +1775,7 @@ function Frame83() {
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black w-[152px]">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">Demo Account</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#7a7a7a] text-[12px] whitespace-nowrap">
         <p className="leading-[18px]">Personal workspace</p>
@@ -1831,7 +1831,7 @@ function NavigationMenuOne() {
     <div className="relative rounded-[5px] shrink-0 w-full" data-name="Navigation Menu One">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
-          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#7a7a7a] text-[12px]">testing@acme.com</p>
+          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#7a7a7a] text-[12px]">demo@plaud.ai</p>
         </div>
       </div>
     </div>

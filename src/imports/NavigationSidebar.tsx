@@ -2,6 +2,7 @@ import svgPaths from "./svg-qxmhuioark";
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import DropMenu from "./DropMenu";
+import { useLanguage } from '../app/i18n/LanguageContext';
 
 function Logo() {
   return (
@@ -41,20 +42,21 @@ function UserAvatarContainer() {
   return (
     <div className="bg-black overflow-clip relative rounded-[5px] shrink-0 size-[24px]" data-name="User Avatar Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] left-[8px] not-italic text-[14px] text-white top-[12px] whitespace-nowrap">
-        <p className="leading-[22px]">T</p>
+        <p className="leading-[22px]">D</p>
       </div>
     </div>
   );
 }
 
 function Frame() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0 whitespace-nowrap">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">Demo Account</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#7a7a7a] text-[12px]">
-        <p className="leading-[18px]">Personal workspace</p>
+        <p className="leading-[18px]">{t('nav.personalWorkspace')}</p>
       </div>
     </div>
   );
@@ -95,6 +97,7 @@ function UserDetailsContainer({ isOpen, onClick }: { isOpen: boolean; onClick: (
 }
 
 function NewRecordingContainer() {
+  const { t } = useLanguage();
   return (
     <div className="relative shrink-0 w-full" data-name="New Recording Container">
       <div className="content-stretch flex flex-col items-start pb-[8px] pt-[4px] px-[8px] relative w-full">
@@ -108,7 +111,7 @@ function NewRecordingContainer() {
                   </svg>
                 </div>
               </div>
-              <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black text-center whitespace-nowrap">Add audio</p>
+              <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black text-center whitespace-nowrap">{t('nav.addAudio')}</p>
             </div>
           </div>
           <div aria-hidden="true" className="absolute border border-[#ccc] border-solid inset-0 pointer-events-none rounded-[5px]" />
@@ -141,6 +144,7 @@ function UserContainer({ isDropdownOpen, onDropdownToggle, onMembershipClick, on
 }
 
 function NavigationItemsContainer({ onHomeClick, showHomeShadow }: { onHomeClick?: () => void; showHomeShadow?: boolean }) {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[204px]" data-name="Navigation Items Container">
       <div
@@ -157,7 +161,7 @@ function NavigationItemsContainer({ onHomeClick, showHomeShadow }: { onHomeClick
             </div>
           </div>
         </div>
-        <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Home</p>
+        <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('nav.home')}</p>
       </div>
       {showHomeShadow && (
         <div className="h-0 relative shrink-0 w-full" data-name="Divider">
@@ -178,7 +182,7 @@ function NavigationItemsContainer({ onHomeClick, showHomeShadow }: { onHomeClick
                 </svg>
               </div>
             </div>
-            <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Search</p>
+            <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('nav.search')}</p>
           </div>
         </div>
       </div>
@@ -194,7 +198,7 @@ function NavigationItemsContainer({ onHomeClick, showHomeShadow }: { onHomeClick
                 </div>
               </div>
             </div>
-            <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Template Community</p>
+            <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('nav.community')}</p>
           </div>
         </div>
       </div>
@@ -208,7 +212,7 @@ function NavigationItemsContainer({ onHomeClick, showHomeShadow }: { onHomeClick
                 </svg>
               </div>
             </div>
-            <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Explore</p>
+            <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('nav.explore')}</p>
           </div>
         </div>
       </div>
@@ -217,9 +221,10 @@ function NavigationItemsContainer({ onHomeClick, showHomeShadow }: { onHomeClick
 }
 
 function Content() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-name="Content">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">Folders</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">{t('nav.folders')}</p>
       <div className="overflow-clip relative rounded-[5px] shrink-0 size-[20px]" data-name="list_chevron">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[4px] left-1/2 top-1/2 w-[8px]">
           <div className="absolute inset-[-8.84%_-4.42%_-17.68%_-4.42%]">
@@ -253,9 +258,10 @@ function Row() {
 }
 
 function Content1() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-name="Content">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">Comes from</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#7a7a7a] text-[14px] whitespace-nowrap">{t('nav.comesFrom')}</p>
       <div className="overflow-clip relative rounded-[5px] shrink-0 size-[20px]" data-name="list_chevron">
         <div className="-translate-x-1/2 -translate-y-1/2 absolute h-[4px] left-1/2 top-1/2 w-[8px]">
           <div className="absolute inset-[-8.84%_-4.42%_-17.68%_-4.42%]">
@@ -282,6 +288,7 @@ function Row1() {
 }
 
 function FolderContainer() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-[204px]" data-name="Folder Container">
       <div className="content-stretch flex gap-[8px] items-center p-[8px] relative rounded-[5px] shrink-0 w-[204px]" data-name="Navigation Menu One">
@@ -293,7 +300,7 @@ function FolderContainer() {
           </div>
         </div>
         <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[0] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">
-          <span className="leading-[22px]">{`All files `}</span>
+          <span className="leading-[22px]">{t('nav.allFiles')}{` `}</span>
           <span className="leading-[22px] text-[#a3a3a3]">(299)</span>
         </p>
       </div>
@@ -306,7 +313,7 @@ function FolderContainer() {
           </div>
         </div>
         <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[0] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">
-          <span className="leading-[22px]">{`Unfiled `}</span>
+          <span className="leading-[22px]">{t('nav.unfiled')}{` `}</span>
           <span className="leading-[22px] text-[#a3a3a3]">(34)</span>
         </p>
       </div>
@@ -323,7 +330,7 @@ function FolderContainer() {
           </div>
         </div>
         <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[0] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">
-          <span className="leading-[22px]">{`Trash `}</span>
+          <span className="leading-[22px]">{t('nav.trash')}{` `}</span>
           <span className="leading-[22px] text-[#a3a3a3]">(3)</span>
         </p>
       </div>
@@ -379,7 +386,7 @@ function FolderContainer() {
                   </div>
                 </div>
               </div>
-              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Trash</p>
+              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('nav.trash')}</p>
             </div>
           </div>
         </div>
@@ -390,7 +397,7 @@ function FolderContainer() {
           <div className="flex flex-row items-center size-full">
             <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
               <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[0] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">
-                <span className="leading-[22px]">Note</span>
+                <span className="leading-[22px]">{t('nav.note')}</span>
                 <span className="leading-[22px]">{` `}</span>
                 <span className="leading-[22px] text-[#a3a3a3]">(100)</span>
               </p>
@@ -401,7 +408,7 @@ function FolderContainer() {
           <div className="flex flex-row items-center size-full">
             <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
               <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[0] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">
-                <span className="leading-[22px]">Call</span>
+                <span className="leading-[22px]">{t('nav.call')}</span>
                 <span className="leading-[22px] text-[#a3a3a3]">{` (2)`}</span>
               </p>
             </div>
@@ -411,7 +418,7 @@ function FolderContainer() {
           <div className="flex flex-row items-center size-full">
             <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
               <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[0] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">
-                <span className="leading-[22px]">Import</span>
+                <span className="leading-[22px]">{t('nav.import')}</span>
                 <span className="leading-[22px] text-[#a3a3a3]">{` (6)`}</span>
               </p>
             </div>

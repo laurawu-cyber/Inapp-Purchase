@@ -1,6 +1,6 @@
 import svgPaths from "./svg-2llxicjxm7";
-import imgWhatsNewItemImage from "figma:asset/854c6d231644b58ddb193dc1c6c1ea956e606e33.png";
-import img22 from "figma:asset/aaec7dd1487c050adb61170dae29c583bb1df724.png";
+import imgWhatsNewItemImage from "@/assets/figma/phone-app.png";
+import img22 from "@/assets/figma/note-pro.png";
 import { imgVector } from "./svg-wr7h8";
 
 function ViewAllContainer() {
@@ -1711,10 +1711,10 @@ function UserInfoTextContainer() {
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0 w-[115px]" data-name="User Info Text Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black whitespace-nowrap">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">Demo Account</p>
       </div>
       <div className="flex flex-col justify-center min-w-full relative shrink-0 text-[#757575] text-[13px] w-[min-content]">
-        <p className="leading-[18px]">Testing Account’s Workspace</p>
+        <p className="leading-[18px]">Demo Account’s Workspace</p>
       </div>
     </div>
   );
@@ -2489,7 +2489,7 @@ function Container1() {
 function Button() {
   return (
     <div className="content-stretch flex gap-[8px] h-[32px] items-center justify-center min-w-[70px] overflow-clip p-[8px] relative rounded-[5px] shrink-0" data-name="Button">
-      <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[12px] text-center">testing@acme.com</p>
+      <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[12px] text-center">demo@plaud.ai</p>
     </div>
   );
 }
@@ -2627,7 +2627,7 @@ function Frame24() {
   return (
     <div className="content-stretch flex flex-[1_0_0] flex-col font-['Inter:Regular',sans-serif] font-normal items-start min-h-px min-w-px not-italic relative">
       <p className="leading-[22px] min-w-full relative shrink-0 text-[14px] text-black w-[min-content]">Email</p>
-      <p className="leading-[18px] relative shrink-0 text-[#3d3d3d] text-[12px] whitespace-nowrap">testing@acme.com</p>
+      <p className="leading-[18px] relative shrink-0 text-[#3d3d3d] text-[12px] whitespace-nowrap">demo@plaud.ai</p>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import svgPaths from "./svg-y1c8db766m";
-import imgWhatsNewItemImage from "figma:asset/854c6d231644b58ddb193dc1c6c1ea956e606e33.png";
-import img22 from "figma:asset/aaec7dd1487c050adb61170dae29c583bb1df724.png";
+import imgWhatsNewItemImage from "@/assets/figma/phone-app.png";
+import img22 from "@/assets/figma/note-pro.png";
 import { imgVector } from "./svg-uijiy";
 import { useState, useEffect } from "react";
 import TeamProfile2Interactive from "../app/components/TeamProfile2Interactive";

@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react'
 
 // Resolves figma:asset/... imports as placeholder transparent PNGs
 function figmaAssetPlugin(): Plugin {
-  const PLACEHOLDER = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=='
+  const PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'%3E%3Crect width='1' height='1' fill='%23e0e0e0'/%3E%3C/svg%3E"
   return {
     name: 'figma-asset',
     resolveId(id) {
@@ -33,5 +33,5 @@ export default defineConfig({
   },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
-  assetsInclude: ['**/*.svg', '**/*.csv'],
+  assetsInclude: ['**/*.svg', '**/*.csv', '**/*.gif'],
 })

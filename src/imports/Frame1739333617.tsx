@@ -1,4 +1,4 @@
-import img1 from "figma:asset/901f60176131613f9cb5ae2b9ee49bca7698cd3a.png";
+import img1 from "@/assets/figma/confetti.gif";
 
 export default function Frame() {
   return (

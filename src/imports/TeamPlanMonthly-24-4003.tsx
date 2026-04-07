@@ -1,6 +1,6 @@
 import svgPaths from "./svg-doch1urbch";
-import imgWhatsNewItemImage from "figma:asset/854c6d231644b58ddb193dc1c6c1ea956e606e33.png";
-import img22 from "figma:asset/aaec7dd1487c050adb61170dae29c583bb1df724.png";
+import imgWhatsNewItemImage from "@/assets/figma/phone-app.png";
+import img22 from "@/assets/figma/note-pro.png";
 import imgUserAvatarContainer from "figma:asset/fc9b94227e574b92551cd21561a10dc54bf22e49.png";
 import { useNavigate } from "react-router";
 
@@ -1001,7 +1001,7 @@ function UserInfoTextContainer() {
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0 whitespace-nowrap" data-name="User Info Text Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">Demo Account</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#757575] text-[12px]">
         <p className="leading-[18px]">Personal Workspace</p>
@@ -1413,7 +1413,7 @@ function UserInfoContainer() {
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0" data-name="User Info Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black w-[152px]">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">Demo Account</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#757575] text-[12px] whitespace-nowrap">
         <p className="leading-[18px]">Plaud ops</p>
@@ -1867,7 +1867,7 @@ function PlanButtonContainer() {
         className="bg-black content-stretch flex gap-[8px] h-[48px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 w-[392px] cursor-pointer hover:bg-gray-800 transition-colors" 
         data-name="Button"
       >
-        <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">Upgrade to Plaud Team</p>
+        <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">Create a Team workspace.</p>
       </div>
     </div>
   );

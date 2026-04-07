@@ -1,23 +1,26 @@
+import { useNavigate } from "react-router";
 import svgPaths from "./svg-ai6p67c772";
+import { useLanguage } from "../app/i18n/LanguageContext";
 
 function UserAvatarContainer() {
   return (
-    <div className="bg-black overflow-clip relative rounded-[6.667px] shrink-0 size-[32px]" data-name="User Avatar Container">
-      <div className="-translate-y-1/2 absolute flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] left-[10.67px] not-italic text-[18.667px] text-white top-[16.33px] whitespace-nowrap">
-        <p className="leading-[29.333px]">T</p>
+    <div className="bg-black overflow-clip relative rounded-[5px] shrink-0 size-[32px]" data-name="User Avatar Container">
+      <div className="-translate-y-1/2 absolute flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] left-[10px] not-italic text-[16px] text-white top-[16px] whitespace-nowrap">
+        <p className="leading-[22px]">D</p>
       </div>
     </div>
   );
 }
 
 function Frame4() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black w-[152px]">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">{t('menu.demoAccount')}</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#7a7a7a] text-[12px] whitespace-nowrap">
-        <p className="leading-[18px]">Personal workspace</p>
+        <p className="leading-[18px]">{t('menu.personalWorkspace')}</p>
       </div>
     </div>
   );
@@ -41,6 +44,7 @@ function UserDetailsContainer() {
 }
 
 function Action() {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex items-start pb-[8px] px-[16px] relative shrink-0 w-[260px]" data-name="action">
       <div className="bg-white h-[32px] min-w-[70px] relative rounded-[5px] shrink-0 w-[95px]" data-name="Button">
@@ -57,7 +61,7 @@ function Action() {
               </div>
             </div>
           </div>
-          <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[#3d3d3d] text-[12px] text-center whitespace-nowrap">Settings</p>
+          <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[#3d3d3d] text-[12px] text-center whitespace-nowrap">{t('menu.settings')}</p>
         </div>
         <div aria-hidden="true" className="absolute border border-[#ebebeb] border-solid inset-0 pointer-events-none rounded-[5px]" />
       </div>
@@ -70,7 +74,7 @@ function NavigationMenuOne() {
     <div className="relative rounded-[5px] shrink-0 w-full" data-name="Navigation Menu One">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
-          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#7a7a7a] text-[12px]">testing@acme.com</p>
+          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#7a7a7a] text-[12px]">demo@plaud.ai</p>
         </div>
       </div>
     </div>
@@ -89,19 +93,21 @@ function UserAvatarContainer1() {
   return (
     <div className="bg-black overflow-clip relative rounded-[5px] shrink-0 size-[24px]" data-name="User Avatar Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] left-[8px] not-italic text-[14px] text-white top-[12px] whitespace-nowrap">
-        <p className="leading-[22px]">T</p>
+        <p className="leading-[22px]">D</p>
       </div>
     </div>
   );
 }
 
+
 function NavigationMenuOne1() {
+  const { t } = useLanguage();
   return (
     <div className="relative rounded-[5px] shrink-0 w-full" data-name="Navigation Menu One">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
           <UserAvatarContainer1 />
-          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Personal workspace</p>
+          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.personalWorkspace')}</p>
           <div className="overflow-clip relative shrink-0 size-[20px]" data-name="icon_checkmark">
             <div className="absolute flex inset-[31.94%_20%_28.06%_20%] items-center justify-center">
               <div className="-scale-y-100 flex-none h-[8px] rotate-180 w-[12px]">
@@ -146,12 +152,13 @@ function Frame6() {
 }
 
 function NavigationMenuOne2({ onCreateTeamClick }: { onCreateTeamClick?: () => void }) {
+  const { t } = useLanguage();
   return (
     <div className="relative rounded-[5px] shrink-0 w-full hover:bg-[#ebebeb] cursor-pointer" data-name="Navigation Menu One" onClick={onCreateTeamClick}>
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
           <Frame6 />
-          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Create a Team workspace</p>
+          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.createTeam')}</p>
         </div>
       </div>
     </div>
@@ -166,11 +173,54 @@ function Frame3({ onCreateTeamClick }: { onCreateTeamClick?: () => void }) {
   );
 }
 
+function TeamWorkspaceAvatar() {
+  return (
+    <div className="bg-black rounded-full shrink-0 size-[24px] flex items-center justify-center" data-name="User Avatar Container">
+      <div className="overflow-clip relative size-[14px]">
+        <div className="absolute inset-[20.31%_15.36%_21.03%_15.21%]">
+          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.886 11.7324">
+            <path d="M6.94336 0.416992C8.6287 0.417154 10.1741 1.50768 10.6836 3.09863L13.3154 11.3154H11.8262L9.17285 2.44922C9.04523 2.02256 8.65256 1.72949 8.20703 1.72949H5.67871C5.23324 1.72956 4.8405 2.02261 4.71289 2.44922L2.06055 11.3154H0.570312L3.20215 3.09863C3.71169 1.50757 5.2579 0.416992 6.94336 0.416992ZM6.94336 5.64551C7.55603 5.64571 8.05264 6.14219 8.05273 6.75488C8.05273 7.36757 7.55614 7.86406 6.94336 7.86426C6.33045 7.86426 5.83301 7.3677 5.83301 6.75488C5.8331 6.14206 6.33055 5.64551 6.94336 5.64551Z" fill="white" stroke="white" strokeWidth="0.833333" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Frame5({ onCreateTeamClick }: { onCreateTeamClick?: () => void }) {
+  const navigate = useNavigate();
+
+  // Read team workspaces — handles both legacy string[] and new {name,createdAt}[] formats
+  const raw: (string | {name: string})[] = JSON.parse(localStorage.getItem('teamWorkspaces') || '[]');
+  const teamWorkspaces: string[] = raw.map(w => typeof w === 'string' ? w : w.name);
+
   return (
     <div className="relative shrink-0 w-full">
       <div className="content-stretch flex flex-col items-start px-[8px] relative w-full">
         <Frame1 />
+        {/* Team workspaces — listed BEFORE personal workspace */}
+        {teamWorkspaces.map(name => (
+          <div
+            key={name}
+            className="content-stretch flex flex-col items-start relative shrink-0 w-[240px]"
+          >
+            <div
+              className="relative rounded-[5px] shrink-0 w-full hover:bg-[#f9f9f9] cursor-pointer"
+              onClick={() => {
+                sessionStorage.setItem('switchedWorkspace', name);
+                navigate(`/home-team?workspaceName=${encodeURIComponent(name)}`);
+              }}
+            >
+              <div className="flex flex-row items-center size-full">
+                <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
+                  <TeamWorkspaceAvatar />
+                  <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px] truncate">{name}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+        {/* Personal workspace — always shown with checkmark (current) */}
         <Frame2 />
         <Frame3 onCreateTeamClick={onCreateTeamClick} />
       </div>
@@ -179,6 +229,7 @@ function Frame5({ onCreateTeamClick }: { onCreateTeamClick?: () => void }) {
 }
 
 function Frame({ onMembershipClick }: { onMembershipClick?: () => void }) {
+  const { t } = useLanguage();
   return (
     <div className="relative shrink-0 w-full">
       <div className="content-stretch flex flex-col items-start px-[8px] relative w-full">
@@ -192,7 +243,7 @@ function Frame({ onMembershipClick }: { onMembershipClick?: () => void }) {
                   </svg>
                 </div>
               </div>
-              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Membership Center</p>
+              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.membershipCenter')}</p>
             </div>
           </div>
         </div>
@@ -206,7 +257,7 @@ function Frame({ onMembershipClick }: { onMembershipClick?: () => void }) {
                   </svg>
                 </div>
               </div>
-              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Help Center</p>
+              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.helpCenter')}</p>
             </div>
           </div>
         </div>
@@ -220,7 +271,7 @@ function Frame({ onMembershipClick }: { onMembershipClick?: () => void }) {
                   </svg>
                 </div>
               </div>
-              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{`Download `}</p>
+              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.download')}</p>
             </div>
           </div>
         </div>
@@ -234,7 +285,7 @@ function Frame({ onMembershipClick }: { onMembershipClick?: () => void }) {
                   </svg>
                 </div>
               </div>
-              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Sign out</p>
+              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.signOut')}</p>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import { useSearchParams, useNavigate } from "react-router";
 import { useEffect, useState } from "react";
 import svgPaths from "../../imports/svg-oc2vne8jms";
-const img3 = "https://www.figma.com/api/mcp/asset/3b75c872-27b4-4a2e-af81-1ca343e5f172";
+import img3 from "@/assets/figma/clapping.gif";
 
 function Logo() {
   return (

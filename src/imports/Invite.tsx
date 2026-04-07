@@ -394,7 +394,7 @@ function InviteSection({ availableSeats, emailInputs, setEmailInputs, emailPills
   return (
     <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-[464px]" data-name="Invite Section">
       <InviteHeader availableSeats={availableSeats} />
-      {Array.from({ length: availableSeats }).map((_, index) => {
+      {Array.from({ length: Math.min(availableSeats, 5) }).map((_, index) => {
         const pills = emailPills[index] || [];
         const hasEmail = pills.length > 0;
         

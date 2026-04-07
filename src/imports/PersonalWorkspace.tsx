@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
+import { useLanguage } from "../app/i18n/LanguageContext";
 import svgPaths from "./svg-k0wlzkbgjd";
 import svgPathsDropdown from "./svg-dwpprsfly5";
-const imgImage6344892 = "https://www.figma.com/api/mcp/asset/7420cfad-1d9d-43e2-9d7a-53ae2092dfd8";
-const img22 = "https://www.figma.com/api/mcp/asset/63691854-303b-4613-9a72-c6c8097bd97d";
+import imgImage6344892 from "@/assets/figma/phone-app.png";
+import img22 from "@/assets/figma/note-pro.png";
 import NavigationSidebar from "./NavigationSidebar";
 import { imgVector } from "./svg-iyoow.tsx";
 import TeamPlanAnnual from "./TeamPlanAnnual";
@@ -57,7 +58,7 @@ function Frame78() {
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0 whitespace-nowrap">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">Demo Account</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#7a7a7a] text-[12px]">
         <p className="leading-[18px]">Personal workspace</p>
@@ -1779,7 +1780,7 @@ function DropMenu({ onMembershipCenterClick }: { onMembershipCenterClick?: () =>
           <div className="content-stretch flex gap-[4px] items-center relative shrink-0">
             <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0">
               <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black w-[152px]">
-                <p className="leading-[22px]">Testing Account</p>
+                <p className="leading-[22px]">Demo Account</p>
               </div>
               <div className="flex flex-col justify-center relative shrink-0 text-[#7a7a7a] text-[12px] whitespace-nowrap">
                 <p className="leading-[18px]">Personal workspace</p>
@@ -1828,7 +1829,7 @@ function DropMenu({ onMembershipCenterClick }: { onMembershipCenterClick?: () =>
           <div className="relative rounded-[5px] shrink-0 w-full">
             <div className="flex flex-row items-center size-full">
               <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
-                <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#7a7a7a] text-[12px]">testing@acme.com</p>
+                <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#7a7a7a] text-[12px]">demo@plaud.ai</p>
               </div>
             </div>
           </div>
@@ -1970,6 +1971,17 @@ function DropMenu({ onMembershipCenterClick }: { onMembershipCenterClick?: () =>
 export default function PersonalWorkspace() {
   const [showTeamPlan, setShowTeamPlan] = useState(false);
   const [showSettings, setShowSettings] = useState(false);
+  const [switchToast, setSwitchToast] = useState<{ visible: boolean; text: string }>({ visible: false, text: '' });
+  const { t } = useLanguage();
+
+  useEffect(() => {
+    const switched = sessionStorage.getItem('switchedWorkspace');
+    if (switched) {
+      sessionStorage.removeItem('switchedWorkspace');
+      setSwitchToast({ visible: true, text: t('toast.switchedTo', { name: switched }) });
+      setTimeout(() => setSwitchToast({ visible: false, text: '' }), 3000);
+    }
+  }, []);
 
   const handleCreateTeam = () => {
     setShowTeamPlan(true);
@@ -2015,6 +2027,25 @@ export default function PersonalWorkspace() {
           <div className="w-[1196px] h-[829px] max-h-[90vh] overflow-auto" onClick={(e) => e.stopPropagation()}>
             <SettingsModal onClose={handleCloseSettings} />
           </div>
+        </div>
+      )}
+
+      {/* Workspace switch toast */}
+      {switchToast.visible && (
+        <div className="fixed left-1/2 -translate-x-1/2 z-[700]" style={{ top: '60px' }}>
+          <div className="flex gap-[24px] items-center overflow-clip px-[16px] py-[8px] rounded-[5px] shadow-[0px_0px_32px_0px_rgba(0,0,0,0.1)]" style={{ background: 'linear-gradient(90deg, rgba(54,217,108,0.15) 0%, rgba(54,217,108,0.15) 100%), white' }}>
+            <div className="flex gap-[8px] items-center">
+              <svg className="shrink-0 size-[20px]" fill="none" viewBox="0 0 20 20">
+                <circle cx="10" cy="10" r="9" stroke="#1A8038" strokeWidth="1.5" />
+                <path d="M6.5 10l2.5 2.5 4.5-4.5" stroke="#1A8038" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] relative shrink-0 text-black text-[14px] whitespace-nowrap">{switchToast.text}</p>
+            </div>
+            <button onClick={() => setSwitchToast({ visible: false, text: '' })} className="overflow-clip relative shrink-0 size-[20px] flex items-center justify-center hover:opacity-70">
+              <svg className="size-[11px]" fill="none" viewBox="0 0 11 11"><path d="M1 1l9 9M10 1l-9 9" stroke="black" strokeWidth="1.5" strokeLinecap="round" /></svg>
+            </button>
+          </div>
+          <div aria-hidden="true" className="absolute border border-[rgba(0,0,0,0.08)] border-solid inset-0 pointer-events-none rounded-[5px]" />
         </div>
       )}
     </div>

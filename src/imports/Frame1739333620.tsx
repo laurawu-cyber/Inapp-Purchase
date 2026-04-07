@@ -1,10 +1,10 @@
 import svgPaths from "./svg-pkd3nb69cz";
-import img202512111133381 from "figma:asset/fc26005c095141b1a560e35d22ef53d7474d93c9.png";
-import img202512111132011 from "figma:asset/6496aa0bbffe79f81402730cd8933fff530fd32b.png";
-import imgImage6344888 from "figma:asset/9e698a80cb4b584ddec20de8470864927dc1b90e.png";
-import imgImage6344889 from "figma:asset/8d42d53de33ff8c180d36feb21b4e30ab8d9a1b7.png";
-import imgImage6344890 from "figma:asset/1ea11e295c2a152d67c4edb1aee158bdc10bf200.png";
-import imgImage6344891 from "figma:asset/3f3bf2a28505f760f089b254e0814297dbb41036.png";
+import img202512111133381 from "@/assets/figma/badge-iso-27001.png";
+import img202512111132011 from "@/assets/figma/badge-iso-27701.png";
+import imgImage6344888 from "@/assets/figma/badge-gdpr.png";
+import imgImage6344889 from "@/assets/figma/badge-soc2.png";
+import imgImage6344890 from "@/assets/figma/badge-hipaa.png";
+import imgImage6344891 from "@/assets/figma/badge-en18031.png";
 
 function Content() {
   return (
@@ -115,7 +115,7 @@ function Frame8() {
   return (
     <div className="content-stretch flex flex-col items-start relative shrink-0">
       <div className="bg-black content-stretch flex gap-[8px] h-[48px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 w-[392px]" data-name="Button">
-        <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">Upgrade to Plaud Team</p>
+        <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">Create a Team workspace.</p>
       </div>
     </div>
   );

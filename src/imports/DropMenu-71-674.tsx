@@ -1,15 +1,14 @@
 import svgPaths from "./svg-hrqvu8vev0";
+import { useLanguage } from "../app/i18n/LanguageContext";
 
 function UserAvatarContainer() {
   return (
-    <div className="bg-[#ebebeb] overflow-clip relative rounded-[5px] shrink-0 size-[32px]" data-name="User Avatar Container">
-      <div className="absolute left-[6px] overflow-clip size-[20px] top-[6px]" data-name="icon_tem_com_real_estate">
-        <div className="absolute inset-[23.84%_20%_20%_20%]" data-name="Vector">
-          <div className="absolute inset-[-4.45%_-4.17%_0_-4.17%]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13 11.732">
-              <path d={svgPaths.pd0de300} id="Vector" stroke="var(--stroke-0, black)" strokeLinejoin="round" />
-            </svg>
-          </div>
+    <div className="bg-black rounded-full shrink-0 size-[32px] flex items-center justify-center" data-name="User Avatar Container">
+      <div className="overflow-clip relative size-[18px]">
+        <div className="absolute inset-[20.31%_15.36%_21.03%_15.21%]">
+          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.886 11.7324">
+            <path d="M6.94336 0.416992C8.6287 0.417154 10.1741 1.50768 10.6836 3.09863L13.3154 11.3154H11.8262L9.17285 2.44922C9.04523 2.02256 8.65256 1.72949 8.20703 1.72949H5.67871C5.23324 1.72956 4.8405 2.02261 4.71289 2.44922L2.06055 11.3154H0.570312L3.20215 3.09863C3.71169 1.50757 5.2579 0.416992 6.94336 0.416992ZM6.94336 5.64551C7.55603 5.64571 8.05264 6.14219 8.05273 6.75488C8.05273 7.36757 7.55614 7.86406 6.94336 7.86426C6.33045 7.86426 5.83301 7.3677 5.83301 6.75488C5.8331 6.14206 6.33055 5.64551 6.94336 5.64551Z" fill="white" stroke="white" strokeWidth="0.833333" />
+          </svg>
         </div>
       </div>
     </div>
@@ -17,10 +16,11 @@ function UserAvatarContainer() {
 }
 
 function UserInfoContainer({ workspaceName }: { workspaceName: string }) {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0 whitespace-nowrap" data-name="User Info Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">{t('menu.demoAccount')}</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#757575] text-[13px]">
         <p className="leading-[18px]">{workspaceName}</p>
@@ -47,6 +47,7 @@ function UserDetailsContainer({ workspaceName }: { workspaceName: string }) {
 }
 
 function Action({ onSettingsClick, onInviteMemberClick }: { onSettingsClick?: () => void; onInviteMemberClick?: () => void }) {
+  const { t } = useLanguage();
   return (
     <div className="content-stretch flex gap-[8px] items-start justify-center pb-[8px] relative shrink-0 w-[260px]" data-name="action">
       <div className="bg-white h-[32px] min-w-[70px] relative rounded-[5px] shrink-0 w-[95px] cursor-pointer" data-name="Button" onClick={onSettingsClick}>
@@ -63,7 +64,7 @@ function Action({ onSettingsClick, onInviteMemberClick }: { onSettingsClick?: ()
               </div>
             </div>
           </div>
-          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[13px]">Settings</p>
+          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[13px]">{t('menu.settings')}</p>
         </div>
         <div aria-hidden="true" className="absolute border border-[#ebebeb] border-solid inset-0 pointer-events-none rounded-[5px]" />
       </div>
@@ -83,7 +84,7 @@ function Action({ onSettingsClick, onInviteMemberClick }: { onSettingsClick?: ()
               </svg>
             </div>
           </div>
-          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[13px]">Invite member</p>
+          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[13px]">{t('menu.inviteMember')}</p>
         </div>
         <div aria-hidden="true" className="absolute border border-[#ebebeb] border-solid inset-0 pointer-events-none rounded-[5px]" />
       </div>
@@ -96,7 +97,7 @@ function NavigationMenuOne() {
     <div className="relative rounded-[5px] shrink-0 w-full" data-name="Navigation Menu One">
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
-          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#7a7a7a] text-[12px]">testing@acme.com</p>
+          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[18px] min-h-px min-w-px not-italic relative text-[#7a7a7a] text-[12px]">demo@plaud.ai</p>
         </div>
       </div>
     </div>
@@ -113,14 +114,12 @@ function DropdownMenuItem() {
 
 function UserAvatarContainer1() {
   return (
-    <div className="bg-[#ebebeb] overflow-clip relative rounded-[3.75px] shrink-0 size-[24px]" data-name="User Avatar Container">
-      <div className="absolute left-[4.5px] overflow-clip size-[15px] top-[4.5px]" data-name="icon_tem_com_real_estate">
-        <div className="absolute inset-[23.84%_20%_20%_20%]" data-name="Vector">
-          <div className="absolute inset-[-4.45%_-4.17%_0_-4.17%]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 9.75 8.79899">
-              <path d={svgPaths.p3846b80} id="Vector" stroke="var(--stroke-0, black)" strokeLinejoin="round" strokeWidth="0.75" />
-            </svg>
-          </div>
+    <div className="bg-black rounded-full shrink-0 size-[24px] flex items-center justify-center" data-name="User Avatar Container">
+      <div className="overflow-clip relative size-[14px]">
+        <div className="absolute inset-[20.31%_15.36%_21.03%_15.21%]">
+          <svg className="absolute block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.886 11.7324">
+            <path d="M6.94336 0.416992C8.6287 0.417154 10.1741 1.50768 10.6836 3.09863L13.3154 11.3154H11.8262L9.17285 2.44922C9.04523 2.02256 8.65256 1.72949 8.20703 1.72949H5.67871C5.23324 1.72956 4.8405 2.02261 4.71289 2.44922L2.06055 11.3154H0.570312L3.20215 3.09863C3.71169 1.50757 5.2579 0.416992 6.94336 0.416992ZM6.94336 5.64551C7.55603 5.64571 8.05264 6.14219 8.05273 6.75488C8.05273 7.36757 7.55614 7.86406 6.94336 7.86426C6.33045 7.86426 5.83301 7.3677 5.83301 6.75488C5.8331 6.14206 6.33055 5.64551 6.94336 5.64551Z" fill="white" stroke="white" strokeWidth="0.833333" />
+          </svg>
         </div>
       </div>
     </div>
@@ -165,19 +164,20 @@ function UserAvatarContainer2() {
   return (
     <div className="bg-black overflow-clip relative rounded-[5px] shrink-0 size-[24px]" data-name="User Avatar Container">
       <div className="-translate-y-1/2 absolute flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] left-[8px] not-italic text-[14px] text-white top-[12px] whitespace-nowrap">
-        <p className="leading-[22px]">T</p>
+        <p className="leading-[22px]">D</p>
       </div>
     </div>
   );
 }
 
 function NavigationMenuOne2({ onClick }: { onClick?: () => void }) {
+  const { t } = useLanguage();
   return (
     <div className="relative rounded-[5px] shrink-0 w-full cursor-pointer hover:bg-[#f9f9f9]" data-name="Navigation Menu One" onClick={onClick}>
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
           <UserAvatarContainer2 />
-          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Personal workspace</p>
+          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.personalWorkspace')}</p>
         </div>
       </div>
     </div>
@@ -209,12 +209,13 @@ function CreateTeamIconContainer() {
 }
 
 function NavigationMenuOne3({ onClick }: { onClick?: () => void }) {
+  const { t } = useLanguage();
   return (
     <div className="relative rounded-[5px] shrink-0 w-full cursor-pointer hover:bg-[#f9f9f9]" data-name="Navigation Menu One" onClick={onClick}>
       <div className="flex flex-row items-center size-full">
         <div className="content-stretch flex gap-[8px] items-center p-[8px] relative w-full">
           <CreateTeamIconContainer />
-          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Create a Team workspace</p>
+          <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.createTeam')}</p>
         </div>
       </div>
     </div>
@@ -261,6 +262,7 @@ function DropdownMenuItems({ onPersonalWorkspaceClick, onCreateTeamClick, worksp
 }
 
 function DropdownMenuItem4() {
+  const { t } = useLanguage();
   return (
     <div className="relative shrink-0 w-full" data-name="Dropdown Menu Item">
       <div className="content-stretch flex flex-col items-start px-[8px] relative w-full">
@@ -274,7 +276,7 @@ function DropdownMenuItem4() {
                   </svg>
                 </div>
               </div>
-              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Help Center</p>
+              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.helpCenter')}</p>
             </div>
           </div>
         </div>
@@ -288,7 +290,7 @@ function DropdownMenuItem4() {
                   </svg>
                 </div>
               </div>
-              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">Sign out</p>
+              <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#3d3d3d] text-[14px]">{t('menu.signOut')}</p>
             </div>
           </div>
         </div>
@@ -327,13 +329,14 @@ function DropdownMenuContainer({ onSettingsClick, onInviteMemberClick, onPersona
 }
 
 export default function DropMenu({ onSettingsClick, onInviteMemberClick, onPersonalWorkspaceClick, onCreateTeamClick, workspaceName, otherTeamWorkspaces, onOtherTeamClick }: { onSettingsClick?: () => void; onInviteMemberClick?: () => void; onPersonalWorkspaceClick?: () => void; onCreateTeamClick?: () => void; workspaceName?: string; otherTeamWorkspaces?: string[]; onOtherTeamClick?: (name: string) => void }) {
+  const { t } = useLanguage();
   return (
     <div className="bg-white content-stretch flex gap-[10px] items-center py-[8px] relative rounded-[5px] shadow-[0px_0px_32px_0px_rgba(0,0,0,0.1)] w-[260px]" data-name="drop_menu">
       <DropdownMenuContainer onSettingsClick={onSettingsClick} onInviteMemberClick={onInviteMemberClick} onPersonalWorkspaceClick={onPersonalWorkspaceClick} onCreateTeamClick={onCreateTeamClick} workspaceName={workspaceName || 'Team workspace'} otherTeamWorkspaces={otherTeamWorkspaces} onOtherTeamClick={onOtherTeamClick} />
       <div className="absolute bg-[#ebebeb] content-stretch flex h-[16px] items-center justify-center left-[176px] px-[4px] rounded-[5px] top-[19px]" data-name="Beta">
         <div aria-hidden="true" className="absolute border border-[#ebebeb] border-solid inset-0 pointer-events-none rounded-[5px]" />
         <div className="flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[#757575] text-[13px] whitespace-nowrap">
-          <p className="leading-[18px]">Admin</p>
+          <p className="leading-[18px]">{t('menu.admin')}</p>
         </div>
       </div>
     </div>

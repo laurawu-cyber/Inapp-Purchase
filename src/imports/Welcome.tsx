@@ -1,5 +1,5 @@
 import svgPaths from "./svg-oc2vne8jms";
-import img3 from "figma:asset/47c58c284a39a87d3bcfecb7212adbc0b4a76122.png";
+import img3 from "@/assets/figma/clapping.gif";
 import { imgVector } from "./svg-8hwo2";
 
 function ViewAllContainer() {

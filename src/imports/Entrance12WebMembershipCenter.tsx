@@ -55,7 +55,7 @@ function Title() {
 function Container2() {
   return (
     <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-name="Container">
-      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">Testing Account</p>
+      <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">Demo Account</p>
       <div className="bg-[#d6d6d6] content-stretch flex h-[20px] items-center justify-center px-[8px] relative rounded-[5px] shrink-0" data-name="member">
         <div className="flex flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] not-italic relative shrink-0 text-[12px] text-black whitespace-nowrap">
           <p className="leading-[18px]">Starter</p>
@@ -1443,7 +1443,7 @@ function Frame58() {
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0 whitespace-nowrap">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">Demo Account</p>
       </div>
       <div className="flex flex-col justify-center relative shrink-0 text-[#7a7a7a] text-[12px]">
         <p className="leading-[18px]">Personal workspace</p>

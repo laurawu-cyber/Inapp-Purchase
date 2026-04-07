@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, Navigate } from "react-router";
 import PersonalWorkspace from "../imports/PersonalWorkspace";
 import Entrance12WebMembershipCenter from "../imports/Entrance12WebMembershipCenter";
 import PlanSelection from "./components/PlanSelection";
@@ -9,10 +9,16 @@ import PaymentSuccessPage from "./components/PaymentSuccessPage";
 import InvitePage from "./components/InvitePage";
 import WelcomePage from "./components/WelcomePage";
 import TeamWorkspacePage from "./components/TeamWorkspacePage";
+import ChooseWorkspacePage from "./components/ChooseWorkspacePage";
+import ManageBillingPage from "./components/ManageBillingPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
+    element: <Navigate to="/home-team?workspaceName=Plaud+Team" replace />,
+  },
+  {
+    path: "/personal",
     Component: PersonalWorkspace,
   },
   {
@@ -50,5 +56,13 @@ export const router = createBrowserRouter([
   {
     path: "/home-team",
     Component: TeamWorkspacePage,
+  },
+  {
+    path: "/choose-workspace",
+    Component: ChooseWorkspacePage,
+  },
+  {
+    path: "/manage-billing",
+    Component: ManageBillingPage,
   },
 ]);

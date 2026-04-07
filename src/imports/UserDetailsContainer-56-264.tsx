@@ -20,10 +20,10 @@ function UserInfoTextContainer() {
   return (
     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0 w-[115px]" data-name="User Info Text Container">
       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black whitespace-nowrap">
-        <p className="leading-[22px]">Testing Account</p>
+        <p className="leading-[22px]">Demo Account</p>
       </div>
       <div className="flex flex-col justify-center min-w-full relative shrink-0 text-[#757575] text-[13px] w-[min-content]">
-        <p className="leading-[18px]">Testing Account’s Workspace</p>
+        <p className="leading-[18px]">Demo Account’s Workspace</p>
       </div>
     </div>
   );

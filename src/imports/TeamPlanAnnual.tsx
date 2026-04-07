@@ -1,16 +1,17 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import svgPaths from "./svg-wb6b5779no";
-import imgWhatsNewItemImage from "figma:asset/854c6d231644b58ddb193dc1c6c1ea956e606e33.png";
-import img22 from "figma:asset/aaec7dd1487c050adb61170dae29c583bb1df724.png";
+import { useLanguage } from "../app/i18n/LanguageContext";
+import imgWhatsNewItemImage from "@/assets/figma/phone-app.png";
+import img22 from "@/assets/figma/note-pro.png";
 import imgUserAvatarContainer from "figma:asset/fc9b94227e574b92551cd21561a10dc54bf22e49.png";
-import img202512111133381 from "figma:asset/fc26005c095141b1a560e35d22ef53d7474d93c9.png";
-import img202512111132011 from "figma:asset/6496aa0bbffe79f81402730cd8933fff530fd32b.png";
-import imgImage6344888 from "figma:asset/9e698a80cb4b584ddec20de8470864927dc1b90e.png";
-import imgImage6344889 from "figma:asset/8d42d53de33ff8c180d36feb21b4e30ab8d9a1b7.png";
-import imgImage6344890 from "figma:asset/1ea11e295c2a152d67c4edb1aee158bdc10bf200.png";
+import img202512111133381 from "@/assets/figma/badge-iso-27001.png";
+import img202512111132011 from "@/assets/figma/badge-iso-27701.png";
+import imgImage6344888 from "@/assets/figma/badge-gdpr.png";
+import imgImage6344889 from "@/assets/figma/badge-soc2.png";
+import imgImage6344890 from "@/assets/figma/badge-hipaa.png";
+import imgImage6344891 from "@/assets/figma/badge-en18031.png";
 import { useCurrency } from "../app/components/CurrencyProvider";
-import imgImage6344891 from "figma:asset/3f3bf2a28505f760f089b254e0814297dbb41036.png";
 import TeamPlanMonthly from "./TeamPlanMonthly";
 
 function IconCheckmark({ className }: { className?: string }) {
@@ -263,6 +264,7 @@ export default function TeamPlanAnnual({ className, onClose }: { className?: str
   const [isAnnual, setIsAnnual] = useState(true);
   const { formatPrice } = useCurrency();
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   if (!isAnnual) {
     return <TeamPlanMonthly className={className} onClose={onClose} onToggle={() => setIsAnnual(true)} />;
@@ -752,7 +754,7 @@ export default function TeamPlanAnnual({ className, onClose }: { className?: str
                   <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="User Name and Status Container">
                     <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0 whitespace-nowrap" data-name="User Info Text Container">
                       <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black">
-                        <p className="leading-[22px]">Testing Account</p>
+                        <p className="leading-[22px]">Demo Account</p>
                       </div>
                       <div className="flex flex-col justify-center relative shrink-0 text-[#757575] text-[12px]">
                         <p className="leading-[18px]">Personal Workspace</p>
@@ -980,7 +982,7 @@ export default function TeamPlanAnnual({ className, onClose }: { className?: str
             <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-name="User Name and Status Container">
               <div className="content-stretch flex flex-col font-['Inter:Regular',sans-serif] font-normal items-start justify-center leading-[0] not-italic relative shrink-0" data-name="User Info Container">
                 <div className="flex flex-col justify-center relative shrink-0 text-[14px] text-black w-[152px]">
-                  <p className="leading-[22px]">Testing Account</p>
+                  <p className="leading-[22px]">Demo Account</p>
                 </div>
                 <div className="flex flex-col justify-center relative shrink-0 text-[#757575] text-[12px] whitespace-nowrap">
                   <p className="leading-[18px]">Plaud ops</p>
@@ -1163,17 +1165,17 @@ export default function TeamPlanAnnual({ className, onClose }: { className?: str
               <div className="content-stretch flex flex-col h-[60px] items-start relative shrink-0 w-full" data-name="Title">
                 <div className="content-stretch flex flex-col items-center relative shrink-0 w-full" data-name="Title">
                   <div className="content-stretch flex items-center justify-between relative shrink-0 w-full" data-name="Content">
-                    <p className="flex-[1_0_0] font-['Inter:Light',sans-serif] font-light leading-[44px] min-h-px min-w-px not-italic relative text-[32px] text-black text-center">Plaud Team</p>
+                    <p className="flex-[1_0_0] font-['Inter:Light',sans-serif] font-light leading-[44px] min-h-px min-w-px not-italic relative text-[32px] text-black text-center">{t('plan.plaudTeam')}</p>
                   </div>
                 </div>
               </div>
-              <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic relative shrink-0 text-[18px] text-black text-center whitespace-nowrap">Unlock unlimited transcription and powerful AI features for your team.</p>
+              <p className="font-['Inter:Light',sans-serif] font-light leading-[28px] not-italic relative shrink-0 text-[18px] text-black text-center whitespace-nowrap">{t('plan.subtitle')}</p>
               <div className="content-stretch flex gap-[12px] items-center justify-center pb-[24px] pt-[16px] relative shrink-0 w-full" data-name="billed">
                 <Toggle onClick={() => setIsAnnual(!isAnnual)} className="bg-black h-[20px] overflow-clip relative rounded-[5px] shrink-0 w-[36px] cursor-pointer" />
-                <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[#413d3b] text-[14px] whitespace-nowrap">Annual billing</p>
+                <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[#413d3b] text-[14px] whitespace-nowrap">{t('plan.annualBilling')}</p>
                 <div className="bg-[rgba(33,239,106,0.2)] content-stretch flex items-center justify-center px-[8px] py-[4px] relative rounded-[5px] shrink-0" data-name="tag">
                   <div aria-hidden="true" className="absolute border border-[#21ef6a] border-solid inset-0 pointer-events-none rounded-[5px]" />
-                  <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[12px] text-black whitespace-nowrap">Save 20%</p>
+                  <p className="font-['Inter:Regular',sans-serif] font-normal leading-[18px] not-italic relative shrink-0 text-[12px] text-black whitespace-nowrap">{t('plan.save20')}</p>
                 </div>
               </div>
               <div className="content-stretch flex items-start justify-center relative shrink-0 w-full" data-name="Plan comparison container">
@@ -1181,7 +1183,7 @@ export default function TeamPlanAnnual({ className, onClose }: { className?: str
                   <div className="bg-white content-stretch flex flex-col gap-[32px] items-start p-[32px] relative rounded-[5px] shrink-0 w-full max-w-[456px]" data-name="1">
                     <div aria-hidden="true" className="absolute border border-[#8f53ed] border-solid inset-0 pointer-events-none rounded-[5px] shadow-[0px_0px_16px_0px_rgba(143,83,237,0.15)]" />
                     <div className="content-stretch flex flex-col gap-[6px] items-start relative shrink-0 w-full" data-name="Text">
-                      <p className="font-['Inter:Light',sans-serif] font-light leading-[36px] not-italic relative shrink-0 text-[24px] text-black w-full">Team Plan</p>
+                      <p className="font-['Inter:Light',sans-serif] font-light leading-[36px] not-italic relative shrink-0 text-[24px] text-black w-full">{t('plan.teamPlan')}</p>
                     </div>
                     <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full" data-name="price & button">
                       <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
@@ -1189,15 +1191,15 @@ export default function TeamPlanAnnual({ className, onClose }: { className?: str
                           <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] not-italic relative shrink-0 text-[32px] text-black whitespace-nowrap">{formatPrice(20)}</p>
                           <p className="[text-decoration-skip-ink:none] decoration-solid font-['Inter:Light',sans-serif] font-light leading-[44px] line-through not-italic relative shrink-0 text-[#a3a3a3] text-[32px] whitespace-nowrap">{formatPrice(25)}</p>
                           <div className="content-stretch flex flex-[1_0_0] items-center justify-between min-h-px min-w-px py-[4px] relative" data-name="info">
-                            <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#74706d] text-[14px]">/ seat / month</p>
+                            <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[#74706d] text-[14px]">{t('plan.perSeatMonth')}</p>
                           </div>
                         </div>
-                        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#3d3d3d] text-[14px] whitespace-nowrap">Billed annually ({formatPrice(240)} per seat)</p>
+                        <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#3d3d3d] text-[14px] whitespace-nowrap">{t('plan.billedAnnually', { price: formatPrice(20) })}</p>
                       </div>
                       <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
                         <div className="content-stretch flex flex-col items-start relative shrink-0 w-full">
-                          <div onClick={() => navigate('/create-workspace?plan=annual&price=240&planName=Teams%20Unlimited%20(Annual)&billing=Billed%20annually')} className="bg-black content-stretch flex gap-[8px] h-[48px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 w-full cursor-pointer" data-name="Button">
-                            <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">Upgrade to Plaud Team</p>
+                          <div onClick={() => navigate('/create-workspace?plan=annual&price=20&planName=Teams%20Unlimited%20(Annual)&billing=Billed%20annually')} className="bg-black content-stretch flex gap-[8px] h-[48px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 w-full cursor-pointer" data-name="Button">
+                            <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">{t('plan.upgradeBtn')}</p>
                           </div>
                         </div>
                       </div>
@@ -1209,100 +1211,98 @@ export default function TeamPlanAnnual({ className, onClose }: { className?: str
           </div>
           <div className="content-stretch flex flex-col gap-[40px] items-center pb-[56px] relative shrink-0 w-full">
             <div className="content-stretch flex flex-col gap-[12px] items-start not-italic relative shrink-0 text-center w-full">
-              <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] relative shrink-0 text-[32px] text-black w-full">{`What's included in Plaud Team`}</p>
+              <p className="font-['Inter:Light',sans-serif] font-light leading-[44px] relative shrink-0 text-[32px] text-black w-full">{t('plan.whatsIncluded')}</p>
               <p className="font-['Inter:Regular',sans-serif] font-normal leading-[0] relative shrink-0 text-[#757575] text-[0px] text-[14px] w-full">
-                <span className="leading-[22px]">{`Need more info about `}</span>
-                <span className="leading-[22px]">{`Plaud `}</span>
-                <span className="leading-[22px]">{`Team? `}</span>
-                <span className="decoration-solid leading-[22px] underline">Contact Sales</span>
+                <span className="leading-[22px]">{t('plan.needMoreInfo')}{' '}</span>
+                <span className="decoration-solid leading-[22px] underline">{t('plan.contactSales')}</span>
               </p>
             </div>
             <div className="gap-x-[8px] gap-y-[8px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative shrink-0 w-full" data-name="Features Container">
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0" data-name="Transcription Container">
-                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[28px] min-w-full not-italic relative shrink-0 text-[18px] text-black w-[min-content]">Workspace management</p>
+                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[28px] min-w-full not-italic relative shrink-0 text-[18px] text-black w-[min-content]">{t('plan.workspaceMgmt')}</p>
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Transcription Features">
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Centralized billing</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.centralizedBilling')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Manage seats</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.manageSeats')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Manage members</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.manageMembers')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Manage devices</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.manageDevices')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Priority support</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.prioritySupport')}</p>
                   </div>
                 </div>
               </div>
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0" data-name="Recording Container">
-                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[28px] not-italic relative shrink-0 text-[18px] text-black w-full">Transcription</p>
+                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[28px] not-italic relative shrink-0 text-[18px] text-black w-full">{t('plan.transcription')}</p>
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Recording Features">
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Unlimited transcription</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.unlimitedTranscription')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">Supports 112 languages</p>
+                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">{t('plan.supports112')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">Automatic translation</p>
+                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">{t('plan.automaticTranslation')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">Auto speaker labeling</p>
+                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">{t('plan.autoSpeakerLabeling')}</p>
                   </div>
                 </div>
               </div>
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0" data-name="Summaries Container">
-                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[28px] not-italic relative shrink-0 text-[18px] text-black w-full">AI summaries</p>
+                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[28px] not-italic relative shrink-0 text-[18px] text-black w-full">{t('plan.aiSummaries')}</p>
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="Summaries Features">
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">10,000 templates</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.templates')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Custom summaries</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.customSummaries')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">GPT, Claude, and Gemini</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.gptClaude')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Ask Plaud AI</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.askPlaudAI')}</p>
                   </div>
                 </div>
               </div>
               <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0" data-name="AI Features Container">
-                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[28px] not-italic relative shrink-0 text-[18px] text-black w-full">Additional features</p>
+                <p className="font-['Inter:Regular',sans-serif] font-normal leading-[28px] not-italic relative shrink-0 text-[18px] text-black w-full">{t('plan.additionalFeatures')}</p>
                 <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full" data-name="AI Features">
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Plaud Desktop recording</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.desktopRecording')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">Highlight key moments</p>
+                    <p className="flex-[1_0_0] font-['Inter:Regular',sans-serif] font-normal leading-[22px] min-h-px min-w-px not-italic relative text-[14px] text-black">{t('plan.highlightMoments')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">Zapier integrations</p>
+                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">{t('plan.zapier')}</p>
                   </div>
                   <div className="content-stretch flex gap-[8px] items-center relative shrink-0 w-full" data-name="Feature Item">
                     <Checkmark checked className="overflow-clip relative shrink-0 size-[20px]" />
-                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">Mind maps</p>
+                    <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[14px] text-black whitespace-nowrap">{t('plan.mindMaps')}</p>
                   </div>
                 </div>
               </div>

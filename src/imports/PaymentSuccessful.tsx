@@ -1,5 +1,5 @@
 import svgPaths from "./svg-i6i999a6bt";
-const img1 = "https://www.figma.com/api/mcp/asset/0f3e5450-628e-4abf-a100-6a62aa6bd633";
+import img1 from "@/assets/figma/confetti.gif";
 import { imgVector } from "./svg-07c4p";
 import { useNavigate, useSearchParams } from "react-router";
 

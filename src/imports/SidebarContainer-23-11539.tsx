@@ -1,10 +1,10 @@
 import svgPaths from "./svg-bujk8t59qk";
-import img202512111133381 from "figma:asset/fc26005c095141b1a560e35d22ef53d7474d93c9.png";
-import img202512111132011 from "figma:asset/6496aa0bbffe79f81402730cd8933fff530fd32b.png";
-import imgImage6344888 from "figma:asset/9e698a80cb4b584ddec20de8470864927dc1b90e.png";
-import imgImage6344889 from "figma:asset/8d42d53de33ff8c180d36feb21b4e30ab8d9a1b7.png";
-import imgImage6344890 from "figma:asset/1ea11e295c2a152d67c4edb1aee158bdc10bf200.png";
-import imgImage6344891 from "figma:asset/3f3bf2a28505f760f089b254e0814297dbb41036.png";
+import img202512111133381 from "@/assets/figma/badge-iso-27001.png";
+import img202512111132011 from "@/assets/figma/badge-iso-27701.png";
+import imgImage6344888 from "@/assets/figma/badge-gdpr.png";
+import imgImage6344889 from "@/assets/figma/badge-soc2.png";
+import imgImage6344890 from "@/assets/figma/badge-hipaa.png";
+import imgImage6344891 from "@/assets/figma/badge-en18031.png";
 import { useNavigate } from "react-router";
 import { useState } from "react";
 
@@ -121,7 +121,7 @@ function Frame7({ isAnnual }: { isAnnual?: boolean }) {
     <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-full">
       <Pricing isAnnual={isAnnual} />
       <p className="font-['Inter:Regular',sans-serif] font-normal leading-[22px] not-italic relative shrink-0 text-[#3d3d3d] text-[14px] whitespace-nowrap">
-        {isAnnual ? 'Billed annually ($240 per seat)' : 'Billed monthly'}
+        {isAnnual ? 'Billed annually ($20/mo per seat)' : 'Billed monthly'}
       </p>
     </div>
   );
@@ -132,7 +132,7 @@ function Frame8({ isAnnual }: { isAnnual?: boolean }) {
   
   const handleClick = () => {
     const plan = isAnnual ? 'annual' : 'monthly';
-    const price = isAnnual ? 240 : 25;
+    const price = isAnnual ? 20 : 25;
     const planName = isAnnual ? 'Teams Unlimited (Annual)' : 'Teams Unlimited (Monthly)';
     const billing = isAnnual ? 'Billed annually' : 'Billed monthly';
     navigate(`/create-workspace?plan=${plan}&price=${price}&planName=${encodeURIComponent(planName)}&billing=${encodeURIComponent(billing)}`);
@@ -145,7 +145,7 @@ function Frame8({ isAnnual }: { isAnnual?: boolean }) {
         className="bg-black content-stretch flex gap-[8px] h-[48px] items-center justify-center min-w-[100px] overflow-clip px-[24px] py-[8px] relative rounded-[5px] shrink-0 w-[392px] cursor-pointer hover:bg-gray-800 transition-colors" 
         data-name="Button"
       >
-        <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">Upgrade to Plaud Team</p>
+        <p className="font-['Inter:Medium',sans-serif] font-medium leading-[22px] not-italic relative shrink-0 text-[14px] text-center text-white whitespace-nowrap">Create a Team workspace.</p>
       </div>
     </div>
   );

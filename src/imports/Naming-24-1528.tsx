@@ -398,7 +398,7 @@ function Content() {
   return (
     <div className="content-stretch flex flex-[1_0_0] gap-[8px] items-center min-h-[24px] min-w-px relative" data-name="Content">
       <div className="flex flex-[1_0_0] flex-col font-['Inter:Regular',sans-serif] font-normal justify-center leading-[0] min-h-px min-w-px not-italic overflow-hidden relative text-[14px] text-black text-ellipsis whitespace-nowrap">
-        <p className="leading-[22px] overflow-hidden">Testing Account’s workspace</p>
+        <p className="leading-[22px] overflow-hidden">Demo Account’s workspace</p>
       </div>
     </div>
   );

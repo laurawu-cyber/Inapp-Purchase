@@ -1,4 +1,4 @@
-import img3 from "figma:asset/47c58c284a39a87d3bcfecb7212adbc0b4a76122.png";
+import img3 from "@/assets/figma/clapping.gif";
 
 export default function Frame() {
   return (

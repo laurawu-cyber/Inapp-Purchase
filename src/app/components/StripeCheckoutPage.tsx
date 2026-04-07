@@ -92,7 +92,7 @@ export default function StripeCheckoutPage() {
             <div className="flex items-center justify-between mb-[12px]">
               <h2 className="text-[16px] font-medium text-black">Contact information</h2>
               <div className="flex items-center gap-[8px]">
-                <span className="text-[13px] text-[#666]">testing@acme.com</span>
+                <span className="text-[13px] text-[#666]">demo@plaud.ai</span>
                 <button className="text-[13px] text-[#0066cc] hover:underline">Change info now</button>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function StripeCheckoutPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="testing@acme.com"
+                placeholder="demo@plaud.ai"
                 className="w-full h-[40px] px-[12px] border border-[#d1d1d1] rounded-[6px] text-[14px] focus:outline-none focus:border-[#0066cc] focus:ring-1 focus:ring-[#0066cc]"
               />
             </div>
